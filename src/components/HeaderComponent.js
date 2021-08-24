@@ -3,8 +3,13 @@ import { Container } from "react-bootstrap";
 import profileImage from "../assets/profile.jpg";
 import { HashLink } from "react-router-hash-link";
 
-const HeaderComponent = () => {
+const HeaderComponent = (props) => {
   const list = ["Home", "About", "Work", "Experience", "Contact"];
+
+  const clickSection = (item) =>{
+    console.log(item);
+    props.onClick(item);
+  }
 
   return (
     <Container
@@ -34,8 +39,8 @@ const HeaderComponent = () => {
         <ul className='d-flex justify-content-between'>
           {list.map((item) => {
             return (
-              <li id={item} style={{ listStyle: "none" }} className='me-4'>
-                <h4 style={{ lineHeight: "6.25rem" }}>{item}</h4>
+              <li id={item} style={{ listStyle: "none" }} className='me-4' onClick={()=>{clickSection(item)}}>
+                <h4 name={item} style={{ lineHeight: "6.25rem" }}>{item}</h4>
               </li>
             );
           })}

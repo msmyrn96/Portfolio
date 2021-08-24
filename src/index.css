@@ -77,3 +77,23 @@ code {
   z-index: 100;
   font-weight: bold;
 }
+.circle{
+  border-radius: 50%;
+  background-color: #0094c6;
+  border:none;
+  height: 60px;
+  width: 60px;
+}
+.workGrid{
+  width:800px;
+  height: 230px;
+}
+.vertical{
+  height: 200px;
+  border:1px solid #0094c6;
+  width: 3px;
+  border-radius: 10px;
+  background-color: #0094c6;
+  position: relative;
+  left: 50%;
+}
