@@ -1,13 +1,79 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+@import "bootstrap/dist/css/bootstrap.css";
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.h_00 {
+  font-size: 45px;
+  font-weight: bold;
+}
+.br10 {
+  border-radius: 10px;
+  border-color: none;
+}
+.basicColor {
+  background-color: #0094c6;
+}
+.shadowbox {
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  -khtml-box-shadow: 10px 10px 5px #ccc;
+}
+.textColor{
+  color: #0094c6;
+}
+.marginBig{
+  margin-top: 20%;
+}
+.w80{
+  width:90%;
+}
+.secondColor{
+  background-color: #CCC9DC;
+}
+
+.scrolls{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space:nowrap;
+}
+.scrolls::-webkit-scrollbar{
+  height: 10px;
+  background-color: #CCC9DC;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #0094c6;
+  border-radius: 10px;
+}
+
+.grids{
+  transition: transform .2s;
+  z-index: 0;
+}
+.grids:hover{
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.2); 
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color:#CCC9DC;
+  z-index: 100;
+  font-weight: bold;
 }
