@@ -7,6 +7,7 @@ import AboutComponent from "../components/AboutComponent";
 import WorkComponent from "../components/WorkComponent";
 import ExperienceComponent from "../components/ExperienceComponent";
 import { useRef } from "react";
+import ContactComponent from "../components/ContactComponent"; 
 
 const HomePage = () => {
   const Ref1 = useRef(null);
@@ -40,7 +41,7 @@ const HomePage = () => {
   };
 
   return (
-    <Container className="w-100 p-0 m-0" fluid>
+    <Container style={{overflowX:"hidden"}} className="w-100 p-0 m-0" fluid>
       <HeaderComponent
         onClick={(myRef) => {
           executeScroll(myRef);
@@ -59,7 +60,7 @@ const HomePage = () => {
         <ExperienceComponent />
       </div>
       <div ref={Ref5}>
-        
+        <ContactComponent />
       </div>
     </Container>
   );

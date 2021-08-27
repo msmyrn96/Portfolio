@@ -13,12 +13,12 @@ const ExperienceComponent = () => {
   return (
     <Container className="w-100 p-0 m-0" fluid>
       <div className="marginBig">
-        <div className="h_00 textColor text-center">Experience</div>
-        {works.map((work)=>{
+        <div className="h_00 textColor text-center mb-5">Experience</div>
+        {works.map((work,index)=>{
             return (<div className="d-flex justify-content-center">
             <div className="me-5">
-              <div className="circle"></div>
-              <div className="vertical"></div>
+              <div className={index===0 ? "circle active" : "circle"}></div>
+              <div className={index!=works.length-1 ?"vertical": "vertical last"}></div>
             </div>
             <div className="workGrid basicColor br10">{work.title}</div>
           </div>)
