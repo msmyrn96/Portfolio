@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -76,6 +77,19 @@ code {
   z-index: 100;
   font-weight: bold;
 }
+
+.bigGrid{
+  transition: transform .2s;
+  z-index: 0;
+}
+.bigGrid:hover{
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.05);
+  z-index: 100;
+  font-weight: bold;
+}
+
 .circle{
   border-radius: 50%;
   background-color: transparent;
@@ -117,12 +131,14 @@ code {
 .circleButton{
   border-radius: 50%;
   background-color: white;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   position: relative;
 }
 .circleButton img{
   position: absolute;
+    width:60px;
+    height: auto;
     top: 50%;
     left: 50%;
     margin-right: -50%;

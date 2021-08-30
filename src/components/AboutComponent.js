@@ -18,11 +18,11 @@ const AboutComponent = () => {
           className='text-white br10 basicColor w80 shadowbox'
         >
           <Row>
-            <Col className='col-4 m-5 me-0 mb-4'>
+            <Col className='col-5 m-5 me-0 mb-4'>
               <img className='col-12 br10' src={secondaryImage} />
             </Col>
-            <Col className='col-6 m-5 mb-4'>
-              <h4 style={{ lineHeight: "1.6" }}>{text}</h4>
+            <Col className='col-5 m-5 mb-4'>
+              <h5 style={{ lineHeight: "1.6" }}>{text}</h5>
             </Col>
           </Row>
           <div style={{height:"70px"}} className='d-flex justify-content-center w-100'>
