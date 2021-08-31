@@ -8,6 +8,8 @@ import WorkComponent from "../components/WorkComponent";
 import ExperienceComponent from "../components/ExperienceComponent";
 import { useRef } from "react";
 import ContactComponent from "../components/ContactComponent"; 
+import FooterComponent from "../components/FooterComponent";
+
 
 const HomePage = () => {
   const Ref1 = useRef(null);
@@ -61,6 +63,9 @@ const HomePage = () => {
       </div>
       <div ref={Ref5}>
         <ContactComponent />
+      </div>
+      <div>
+        <FooterComponent/>
       </div>
     </Container>
   );

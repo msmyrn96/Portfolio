@@ -40,7 +40,7 @@ const HeaderComponent = (props) => {
           {list.map((item) => {
             return (
               <li id={item} style={{ listStyle: "none" }} className='me-4' onClick={()=>{clickSection(item)}}>
-                <h4 name={item} style={{ lineHeight: "6.25rem" }}>{item}</h4>
+                <h4 name={item} style={{ lineHeight: "6.25rem",cursor:"pointer"}}>{item}</h4>
               </li>
             );
           })}
