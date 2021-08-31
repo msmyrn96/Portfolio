@@ -1,13 +1,17 @@
-import { Container, Form, Row, Col } from "react-bootstrap";
+import { Container, Form, Row, Col,Modal,Button } from "react-bootstrap";
 import MapContainer from "./MapContainer";
 import send from "../assets/Group.png";
 import { useState } from "react";
 import emailkey from "../emailkey";
 import emailjs, { init } from "emailjs-com";
+import tic from "../assets/checked 1.png";
 
 init("user_py7ZjoQhL02zv6XNCjNN9");
 
 const ContactComponent = () => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const [name, setName] = useState("");
   const [subject, setSubject] = useState("");
   const [email, setEmail] = useState("");
@@ -50,15 +54,16 @@ const ContactComponent = () => {
         console.log("FAILED...", err);
       }
     );
+    handleShow();
   };
 
   return (
-    <Container className="w-100 p-0 m-0" fluid>
+    <Container className="w-100 p-0 m-0" fluid >
       <div className="marginBig text-white fw-bold secondColor">
         <h1 className="fw-bold text-center pt-5 pb-5">Contact</h1>
         <Row>
           <Col className="mb-5">
-            <Form className="w-50 col-7 offset-3">
+            <Form className="w-50 col-7 offset-3" >
               <Form.Group
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
@@ -125,6 +130,22 @@ const ContactComponent = () => {
           </div>
         </div>
       </div>
+
+
+      <Modal className="text-center" show={show} onHide={handleClose}>
+        <Modal.Header>
+          <Modal.Title>Email was sent!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="text-center">
+        <img style={{width:60,height:60}} src={tic} alt="tic"/>
+        <div className="mt-2">Thank you for contacting me!</div>
+        You will receive a reply shortly!</Modal.Body>
+        <Modal.Footer className="d-flex justify-content-center">
+          <Button style={{backgroundColor:"#0094C6"}} onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Container>
   );
 };

@@ -71,9 +71,9 @@ code {
   z-index: 0;
 }
 .grids:hover{
-  -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(1.2); 
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
   border-radius: 10px;
   background-color:#CCC9DC;
   z-index: 100;
@@ -150,4 +150,11 @@ code {
 .social img{
   width: 35px;
   height: auto;
+}
+
+.githubButton{
+  background-color: #0094c6;
+  border-radius: 10px;
+  width: 180px;
+  cursor: pointer;
 }

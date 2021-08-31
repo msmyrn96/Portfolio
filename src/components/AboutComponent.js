@@ -5,7 +5,7 @@ import arrowMore from "../assets/left-arrow 1.png";
 
 const AboutComponent = () => {
   const text =
-    "Energetic computer science and programming post graduate eager to apply extensive knowledge of programming skills, both software and hardware to achieve company goals. Dedicated to working hard to make positive contributions.Troubleshooter with excellent diagnostics and repair abilities, strong attention to detail and methodical approach. Expert Microsoft Windows and Linux Ubuntu user. Boost system performance by thoroughly evaluating and correcting different hardware and software issues.";
+    "Energetic computer science and programming post graduate eager to apply extensive knowledge of programming skills, both software and hardware to achieve company goals.\n Dedicated to working hard to make positive contributions.Troubleshooter with excellent diagnostics and repair abilities, strong attention to detail and methodical approach. Expert Microsoft Windows and Linux Ubuntu user. Boost system performance by thoroughly evaluating and correcting different hardware and software issues.";
 
   return (
     <Container fluid>
@@ -22,7 +22,7 @@ const AboutComponent = () => {
               <img className='col-12 br10' src={secondaryImage} />
             </Col>
             <Col className='col-5 m-5 mb-4'>
-              <h5 style={{ lineHeight: "1.6" }}>{text}</h5>
+              <h4 style={{ lineHeight: "1.6" }}>{text}</h4>
             </Col>
           </Row>
           <div style={{height:"70px",cursor:"pointer"}} className='d-flex justify-content-center w-100'>
