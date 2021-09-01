@@ -1,15 +1,15 @@
 import react from "react";
 import { Container } from "react-bootstrap";
 import profileImage from "../assets/profile.jpg";
-import { HashLink } from "react-router-hash-link";
+import menu from "../assets/menu 1.png";
 
 const HeaderComponent = (props) => {
   const list = ["Home", "About", "Work", "Experience", "Contact"];
 
-  const clickSection = (item) =>{
+  const clickSection = (item) => {
     console.log(item);
     props.onClick(item);
-  }
+  };
 
   return (
     <Container
@@ -31,20 +31,41 @@ const HeaderComponent = (props) => {
           src={profileImage}
         />
 
-        <div className='ms-2'>
+        <div className='ms-2 d-lg-block d-md-block d-sm-none d-none'>
           <h4 style={{ lineHeight: "6.25rem" }}>Emmanouil Smyrnakis</h4>
         </div>
       </div>
       <div>
-        <ul className='d-flex justify-content-between'>
+        <ul className='d-none d-md-flex d-lg-flex justify-content-between'>
           {list.map((item) => {
             return (
-              <li id={item} style={{ listStyle: "none" }} className='me-4' onClick={()=>{clickSection(item)}}>
-                <h4 name={item} style={{ lineHeight: "6.25rem",cursor:"pointer"}}>{item}</h4>
+              <li
+                id={item}
+                style={{ listStyle: "none" }}
+                className='me-4'
+                onClick={() => {
+                  clickSection(item);
+                }}
+              >
+                <h4
+                  name={item}
+                  style={{ lineHeight: "6.25rem", cursor: "pointer" }}
+                >
+                  {item}
+                </h4>
               </li>
             );
           })}
         </ul>
+        <div className='d-block d-md-none d-lg-none d-block h-100 me-5'>
+          <img
+          style={{position: "relative",
+                top: "50%",
+                  transform:"translateY(-50%)"}}
+            src={menu}
+            alt='menu'
+          />
+        </div>
       </div>
     </Container>
   );

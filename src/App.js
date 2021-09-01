@@ -6,7 +6,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path='/Portfolio'>
+        <Route exact path='/'>
           <div style={{ overflowX: "hidden" }} className='App p-0 m-0'>
             <HomePage />
           </div>
