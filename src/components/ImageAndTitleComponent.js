@@ -12,7 +12,7 @@ const ImageAndTitleComponent = () => {
 
   return (
     <Row className='h-100'>
-      <Col className='col-7 ms-4 mt-5'>
+      <Col className='col-6 ms-4 mt-5'>
         <img className='shadowbox col-12  br10' src={profileImage} />
       </Col>
 
