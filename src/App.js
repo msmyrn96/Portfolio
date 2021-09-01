@@ -4,9 +4,9 @@ import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <Router basename="/Portfolio">
+    <Router>
       <Switch>
-        <Route  exact path='/'>
+        <Route exact path='/Portfolio'>
           <div style={{ overflowX: "hidden" }} className='App p-0 m-0'>
             <HomePage />
           </div>
