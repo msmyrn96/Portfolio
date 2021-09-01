@@ -32,7 +32,7 @@ const ExperienceComponent = () => {
               <div className={index===0 ? "circle active" : "circle"}></div>
               <div className={index!=works.length-1 ?"vertical": "vertical last"}></div>
             </div>
-            <div className="workGrid basicColor br10 bigGrid">
+            <div className="workGrid basicColor br10 bigGrid shadowbox">
               <div className="text-white m-3 p-3 mb-0 pb-2">
                 <h2 className="fw-bold">{work.title}</h2>
               </div> 

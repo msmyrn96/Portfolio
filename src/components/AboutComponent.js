@@ -25,15 +25,21 @@ const AboutComponent = () => {
               <h4 style={{ lineHeight: "1.6" }}>{text}</h4>
             </Col>
           </Row>
-          <div style={{height:"70px",cursor:"pointer"}} className='d-flex justify-content-center w-100'>
-            <h4 className="me-4" style={{lineHeight:"70px"}}>Read more about me</h4>
+
+          <div
+            style={{ height: "70px", cursor: "pointer" }}
+            className='d-flex justify-content-center w-100'
+          >
+            <h4 className='me-4' style={{ lineHeight: "70px" }}>
+              Read more about me
+            </h4>
             <img
               style={{
                 position: "relative",
                 top: "50%",
                 transform: "translateY(-50%)",
-                width:"40px",
-                height:"40px"
+                width: "40px",
+                height: "40px",
               }}
               src={arrowMore}
             />

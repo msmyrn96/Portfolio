@@ -157,4 +157,6 @@ code {
   border-radius: 10px;
   width: 180px;
   cursor: pointer;
+  position: relative;
+  top:10px;
 }
