@@ -31,8 +31,11 @@ const HeaderComponent = (props) => {
           src={profileImage}
         />
 
-        <div className='ms-2 d-lg-block d-md-block d-sm-none d-none'>
+        <div className='ms-2 d-lg-block d-md-none d-sm-none d-none'>
           <h4 style={{ lineHeight: "6.25rem" }}>Emmanouil Smyrnakis</h4>
+        </div>
+        <div className='ms-2 d-lg-none d-md-block d-sm-block d-block'>
+          <h4 style={{ lineHeight: "6.25rem" }}>E.S.</h4>
         </div>
       </div>
       <div>
