@@ -3,7 +3,7 @@ import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path='/'>
           <div style={{ overflowX: "hidden" }} className='App p-0 m-0'>
