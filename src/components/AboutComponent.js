@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "react-bootstrap";
-import profileImage from "../assets/profile.jpg";
 import secondaryImage from "../assets/pic3.jpg";
 import arrowMore from "../assets/left-arrow 1.png";
 
@@ -19,7 +18,7 @@ const AboutComponent = () => {
         >
           <Row>
             <Col className='col-5 m-5 me-0 mb-4'>
-              <img className='col-12 br10' src={secondaryImage} />
+              <img className='col-12 br10' src={secondaryImage} alt="secondary" />
             </Col>
             <Col className='col-5 m-5 mb-4'>
               <h4 style={{ lineHeight: "1.6" }}>{text}</h4>
@@ -34,6 +33,7 @@ const AboutComponent = () => {
               Read more about me
             </h4>
             <img
+            alt="arrow"
               style={{
                 position: "relative",
                 top: "50%",

@@ -14,12 +14,12 @@ const ExperienceComponent = () => {
       locationDate:"June 2015-August 2015 Chania,Crete Greece",
       Team:"Diagnostic and Computer Technical Team"
   }
-  const jobDetails3 = {
-    title:"Member of technical staff",
-    company:"VMWARE",
-    locationDate:"June 2021-Present Palo Alto CA",
-    Team:"VMware Cloud on AWS - SRE Automation Platform"
-}
+//   const jobDetails3 = {
+//     title:"Member of technical staff",
+//     company:"VMWARE",
+//     locationDate:"June 2021-Present Palo Alto CA",
+//     Team:"VMware Cloud on AWS - SRE Automation Platform"
+// }
     const works = [jobDetails1,jobDetails2]
 
   return (
@@ -30,7 +30,7 @@ const ExperienceComponent = () => {
             return (<div className="d-flex justify-content-center ">
             <div className="me-5">
               <div className={index===0 ? "circle active" : "circle"}></div>
-              <div className={index!=works.length-1 ?"vertical": "vertical last"}></div>
+              <div className={index!==works.length-1 ?"vertical": "vertical last"}></div>
             </div>
             <div className="workGrid basicColor br10 bigGrid shadowbox">
               <div className="text-white m-3 p-3 mb-0 pb-2">

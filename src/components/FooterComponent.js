@@ -3,7 +3,6 @@ import facebook from "../assets/facebook 1.png";
 import instagram from "../assets/instagram 1.png";
 import linkedin from "../assets/linkedin 1.png";
 import twitter from "../assets/twitter 1.png";
-import {Link} from "react-router-dom";
 
 const FooterComponent = () => {
   return (

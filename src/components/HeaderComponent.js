@@ -1,4 +1,3 @@
-import react from "react";
 import { Container } from "react-bootstrap";
 import profileImage from "../assets/profile.jpg";
 import menu from "../assets/menu 1.png";
@@ -19,6 +18,7 @@ const HeaderComponent = (props) => {
     >
       <div className='d-flex h-100 ms-4'>
         <img
+        alt="cover"
           style={{
             width: "4rem",
             height: "4rem",
