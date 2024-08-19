@@ -1,7 +1,5 @@
-import react from "react";
-import { Container, Col, Row, Button } from "react-bootstrap";
+import { Container} from "react-bootstrap";
 import HeaderComponent from "../components/HeaderComponent";
-import profileImage from "../assets/profile.jpg";
 import ImageAndTitleComponent from "../components/ImageAndTitleComponent";
 import AboutComponent from "../components/AboutComponent";
 import WorkComponent from "../components/WorkComponent";

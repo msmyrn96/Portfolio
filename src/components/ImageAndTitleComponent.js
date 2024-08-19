@@ -1,4 +1,4 @@
-import { Container, Col, Row, Button } from "react-bootstrap";
+import { Col, Row, Button } from "react-bootstrap";
 import profileImage from "../assets/profile.jpg";
 
 const ImageAndTitleComponent = () => {
@@ -13,7 +13,7 @@ const ImageAndTitleComponent = () => {
   return (
     <Row className='h-100 d-none d-sm-none d-md-flex'>
       <Col className='col-6 ms-4 mt-5'>
-        <img className='shadowbox col-12 br10' src={profileImage} />
+        <img alt ="profile" className='shadowbox col-12 br10' src={profileImage} />
       </Col>
 
       <Col className='col-4 align-self-center'>

@@ -47,7 +47,7 @@ const WorkComponent = () => {
     {
       title: "Unix-Terminal",
       description:
-        "This is a custom unix terminal created for the puprose of my university's lesson \'Operating Systems\'.",
+        "This is a custom unix terminal created for the puprose of my university's lesson 'Operating Systems'.",
     },
     {
       title: "Data-Structures-Project",
@@ -69,7 +69,7 @@ const WorkComponent = () => {
           {jobs.map((job) => {
             return (
               <div style={{verticalAlign:"top"}} className='w-25 d-inline-block grids ms-5'>
-                <img src={project}/>
+                <img alt="projects" src={project}/ >
                 <h4 className='mt-3 fw-bold'>{job.title}</h4>
                 <h5 style={{ whiteSpace: "normal" }} className='mt-3 mb-3'>
                   {job.description}
