@@ -5,7 +5,7 @@ import AboutComponent from "../components/AboutComponent";
 import WorkComponent from "../components/WorkComponent";
 import ExperienceComponent from "../components/ExperienceComponent";
 import { useRef } from "react";
-import ContactComponent from "../components/ContactComponent"; 
+import ContactComponent from "../components/ContactComponent/ContactComponent";
 import FooterComponent from "../components/FooterComponent";
 
 

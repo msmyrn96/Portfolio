@@ -1,10 +1,11 @@
 import { Container, Form, Row, Col,Modal,Button } from "react-bootstrap";
-import MapContainer from "./MapContainer";
-import send from "../assets/Group.png";
+import MapContainer from "../MapContainer/MapContainer";
+import send from "../../assets/Group.png";
 import { useState } from "react";
-import emailkey from "../emailkey";
+import emailkey from "../../emailkey";
 import emailjs, { init } from "emailjs-com";
-import tic from "../assets/checked 1.png";
+import tic from "../../assets/checked 1.png";
+import './styles.scss';
 
 init("user_py7ZjoQhL02zv6XNCjNN9");
 
@@ -120,7 +121,7 @@ const ContactComponent = () => {
             </Form>
           </Col>
 
-          <Col className="col-5 mt-4">
+          <Col className="col-5 mb-5 map-wrapper">
             <MapContainer />
           </Col>
         </Row>
