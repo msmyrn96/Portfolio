@@ -121,7 +121,7 @@ const ContactComponent = () => {
             </Form>
           </Col>
 
-          <Col className="col-5 mb-5 map-wrapper">
+          <Col className="col-5 mb-5 map-wrapper pe-sm-4">
             <MapContainer />
           </Col>
         </Row>

@@ -1,13 +1,18 @@
 import { Container } from "react-bootstrap";
-import profileImage from "../assets/profile.jpg";
-import menu from "../assets/menu 1.png";
+import profileImage from "../../assets/profile.jpg";
+import { useState } from "react";
+import SidebarComponent from "./SidebarComponent/SidebarComponent";
 
 const HeaderComponent = (props) => {
   const list = ["Home", "About", "Work", "Experience", "Contact"];
+  const [isOpen, setIsOpen] = useState(false);
 
   const clickSection = (item) => {
-    console.log(item);
     props.onClick(item);
+  };
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -60,15 +65,8 @@ const HeaderComponent = (props) => {
             );
           })}
         </ul>
-        <div className='d-block d-md-none d-lg-none d-block h-100 me-5'>
-          <img
-          style={{position: "relative",
-                top: "50%",
-                  transform:"translateY(-50%)"}}
-            src={menu}
-            alt='menu'
-          />
-        </div>
+        <SidebarComponent isOpen={isOpen} toggleSidebar={toggleSidebar} options={list} onClickOption={clickSection}/>
+        
       </div>
     </Container>
   );

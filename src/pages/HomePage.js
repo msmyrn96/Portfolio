@@ -1,5 +1,5 @@
 import { Container} from "react-bootstrap";
-import HeaderComponent from "../components/HeaderComponent";
+import HeaderComponent from "../components/HeaderComponent/HeaderComponent";
 import ImageAndTitleComponent from "../components/ImageAndTitleComponent";
 import AboutComponent from "../components/AboutComponent";
 import WorkComponent from "../components/WorkComponent";
