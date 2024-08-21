@@ -7,7 +7,7 @@ import { ReactComponent as CloseIcon} from "../../../assets/icon-close.svg";
 
 const SidebarComponent = ({ isOpen, toggleSidebar,options,onClickOption }) => {
     const isSidebarOpenVariable = `sidebar ${isOpen ? "open" : ""}`
-    const hasOverlayVariable = `sidebar ${isOpen ? "overlay" : ""}`
+    const hasOverlayVariable = `${isOpen ? "overlay" : ""}`
 
   return (
     <div className='d-block d-md-none d-lg-none d-block h-100 me-5'>
@@ -16,17 +16,17 @@ const SidebarComponent = ({ isOpen, toggleSidebar,options,onClickOption }) => {
         style={{position: "relative",
                 top: "50%",
                 transform:"translateY(-50%)",
-                height:"30px"
+                height:"25px"
             }}
             src={menu}
             alt='menu'
             onClick={toggleSidebar}
         />
-        
+        <div className={hasOverlayVariable} onClick={()=> toggleSidebar()}></div>
         <div className={isSidebarOpenVariable}>
-            <div className={hasOverlayVariable} onClick={()=> toggleSidebar()}></div>
+            
             <div className="close-btn" onClick={toggleSidebar}>
-                <CloseIcon />
+                <CloseIcon height={25} width={25} />
             </div>
 
             {options.map((item) => {
