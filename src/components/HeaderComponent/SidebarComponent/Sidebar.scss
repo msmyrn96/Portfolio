@@ -1,52 +1,77 @@
+.overlay {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: hidden;
+    z-index: 9999;
+    display: visible;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
-    right:-300px;
-    width: 250px;
+    right: -300px;
     height: 100%;
-    background-color:#0094c6;
+    width: 300px;
+    background-color: #0094c6;
     overflow-x: hidden;
     z-index: 9999;
     transition: 0.5s;
     padding-top: 60px;
-}
-  
-  .sidebar.open {
-    right: 0;
-    display: block;
-    transition: 0.5s;
-  }
 
-  .overlay{
-    height: 100%;
-    position: fixed;
-    width:100%;
-    top: 0;
-    left:0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-y: hidden;
-    z-index: 9999;
-    display: visible;
-  }
-  
-  .sidebar a {
-    padding: 15px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-  }
-  
-  .sidebar .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 30px;
-    color: #fff;
-    fill: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
+    &.open {
+        right: 0;
+        display: block;
+        transition: 0.5s;
+
+        .list-item {
+            /* Underline styles */
+            display: inline-block;
+            position: relative;
+            padding: 0.3rem 0;
+            overflow: hidden;
+
+            /* Fade in */
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0.2rem;
+                background-color: #ccc9dc;
+                opacity: 0;
+                transition: opacity 300ms, transform 300ms;
+                transform: translate3d(-100%, 0, 0);
+            }
+
+            /* Slide in */
+
+            &:hover::after,
+            &:focus::after {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+
+    &.fullscreen {
+        width: 100%;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 30px;
+        color: #fff;
+        fill: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+}
