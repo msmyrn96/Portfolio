@@ -1,7 +1,7 @@
 import { Container } from 'react-bootstrap';
 import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
 import ImageAndTitleComponent from '../components/ImageAndTitleComponent/ImageAndTitleComponent';
-import AboutComponent from '../components/AboutComponent';
+import AboutComponent from '../components/AboutComponent/AboutComponent';
 import WorkComponent from '../components/WorkComponent';
 import ExperienceComponent from '../components/ExperienceComponent';
 import { useRef } from 'react';

@@ -1,23 +1,13 @@
 import { Col, Row, Button } from 'react-bootstrap';
 import Lottie from 'react-lottie';
-import animationData from '../../lotties/coding.json';
 import './styles.scss';
 import { useResponsive } from 'ahooks';
+import { defaultOptions, title } from './constants/constants';
 
 const ImageAndTitleComponent = () => {
     const { sm, md } = useResponsive();
-    const title = ['Creating.', 'Developing.', 'Delivering.'];
     const smallScreens = !md;
     const extraSmallScreens = !sm;
-
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-        rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice'
-        }
-    };
 
     return (
         <Row className="h-100 d-block d-sm-block d-md-flex">
@@ -68,7 +58,7 @@ const ImageAndTitleComponent = () => {
                     >
                         <Button
                             variant="none"
-                            className="text-white basicColor br10 mt-3 "
+                            className="text-white primary-color br10 mt-3 "
                         >
                             <h4 className="p-2 m-0">Have a look</h4>
                         </Button>
@@ -77,22 +67,33 @@ const ImageAndTitleComponent = () => {
             </Col>
 
             <h1 className="mt-5 title-container name-title justify-content-center">
-                Hi, I'm
+                Hi! I'm
                 <span className="fw-bold secondary-color">Emmanouil</span> but
                 you can call me
                 <span className="fw-bold secondary-color">Manos</span>
             </h1>
             {!extraSmallScreens ? (
-                <h2 className="mt-4 title-container justify-content-center">
+                <h2 className="title-container justify-content-center">
                     &#123;{' '}
                     <span className="secondary-color">Software Engineer</span> -{' '}
                     <span className="secondary-color">Web Developer </span>{' '}
                     &#125;
                 </h2>
             ) : (
-                <h2 className="mt-4 title-container roles-block">
-                    <span className="secondary-color">Software Engineer</span>
-                    <span className="secondary-color">Web Developer </span>
+                <h2 className="title-container roles-block">
+                    <span>
+                        &#123;
+                        <span className="secondary-color">
+                            {' '}
+                            Software Engineer{' '}
+                        </span>
+                        &#125;
+                    </span>
+                    <span>
+                        &#123;{' '}
+                        <span className="secondary-color"> Web Developer </span>{' '}
+                        &#125;
+                    </span>
                 </h2>
             )}
         </Row>

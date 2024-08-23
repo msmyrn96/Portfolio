@@ -60,7 +60,7 @@ const ContactComponent = () => {
 
     return (
         <Container className="w-100 p-0 m-0" fluid>
-            <div className="marginBig text-white fw-bold secondColor pt-5 pb-5">
+            <div className="marginBig text-white fw-bold secondary-color pt-5 pb-5">
                 <Row>
                     <Col className="mb-5">
                         <Form className="w-50 col-7 offset-3">

@@ -1,0 +1,27 @@
+.row-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.change-layout {
+    width: 100%;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.about-image {
+    &.image-block {
+        max-width: 600px;
+    }
+}
+
+.about-text {
+    width: 100%;
+    font-weight: normal;
+}
+
+.about-container {
+    margin: 0 auto;
+}

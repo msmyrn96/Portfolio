@@ -63,7 +63,7 @@ const WorkComponent = () => {
 
     return (
         <Container className="w-100 p-0 m-0" fluid>
-            <div className="marginBig text-white fw-bold secondColor pt-4">
+            <div className="marginBig text-white fw-bold secondary-color pt-4">
                 <div className=" scrolls pt-4 pb-5 mt-5 ms-0 ps-4 ">
                     {jobs.map((job) => {
                         return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Sidebar.scss';
+import './styles.scss';
 import menu from '../../../assets/menu 1.png';
 import { ReactComponent as CloseIcon } from '../../../assets/icon-close.svg';
 import { useResponsive } from 'ahooks';

@@ -15,7 +15,7 @@ code {
 @import 'bootstrap/dist/css/bootstrap.css';
 
 * {
-    font-family:  "Moderustic", sans-serif;
+    font-family: 'Moderustic', sans-serif;
 }
 
 .h_00 {
@@ -26,7 +26,7 @@ code {
     border-radius: 10px;
     border-color: none;
 }
-.basicColor {
+.primary-color {
     background-color: #0094c6;
 }
 .shadowbox {
@@ -44,7 +44,7 @@ code {
 .w80 {
     width: 90%;
 }
-.secondColor {
+.secondary-color {
     background-color: #ccc9dc;
 }
 

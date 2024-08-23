@@ -3,7 +3,7 @@ import profileImage from '../../assets/profile.jpg';
 import { useEffect, useState } from 'react';
 import SidebarComponent from './SidebarComponent/SidebarComponent';
 import { useResponsive } from 'ahooks';
-import './Header.scss';
+import './styles.scss';
 
 const HeaderComponent = (props) => {
     const list = ['Home', 'About', 'Work', 'Experience', 'Contact'];

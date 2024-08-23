@@ -41,7 +41,7 @@ const ExperienceComponent = () => {
                                     }
                                 ></div>
                             </div>
-                            <div className="workGrid basicColor br10 bigGrid shadowbox">
+                            <div className="workGrid primary-color br10 bigGrid shadowbox">
                                 <div className="text-white m-3 p-3 mb-0 pb-2">
                                     <h2 className="fw-bold">{work.title}</h2>
                                 </div>
