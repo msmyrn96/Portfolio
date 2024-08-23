@@ -39,7 +39,7 @@ const ImageAndTitleComponent = () => {
                     >
                         {title.map((word, index) => {
                             const secondaryColor =
-                                index % 2 === 1 ? 'secondary-color' : '';
+                                index % 2 === 1 ? 'secondary-text' : '';
                             return (
                                 <div className="word-container">
                                     <div
@@ -68,22 +68,22 @@ const ImageAndTitleComponent = () => {
 
             <h1 className="mt-5 title-container name-title justify-content-center">
                 Hi! I'm
-                <span className="fw-bold secondary-color">Emmanouil</span> but
+                <span className="fw-bold secondary-text">Emmanouil</span> but
                 you can call me
-                <span className="fw-bold secondary-color">Manos</span>
+                <span className="fw-bold secondary-text">Manos</span>
             </h1>
             {!extraSmallScreens ? (
                 <h2 className="title-container justify-content-center">
                     &#123;{' '}
-                    <span className="secondary-color">Software Engineer</span> -{' '}
-                    <span className="secondary-color">Web Developer </span>{' '}
+                    <span className="secondary-text">Software Engineer</span> -{' '}
+                    <span className="secondary-text">Web Developer </span>{' '}
                     &#125;
                 </h2>
             ) : (
                 <h2 className="title-container roles-block">
                     <span>
                         &#123;
-                        <span className="secondary-color">
+                        <span className="secondary-text">
                             {' '}
                             Software Engineer{' '}
                         </span>
@@ -91,7 +91,7 @@ const ImageAndTitleComponent = () => {
                     </span>
                     <span>
                         &#123;{' '}
-                        <span className="secondary-color"> Web Developer </span>{' '}
+                        <span className="secondary-text"> Web Developer </span>{' '}
                         &#125;
                     </span>
                 </h2>
