@@ -1,0 +1,66 @@
+.word-wrapper {
+    color: rgb(0, 148, 198);
+    font-weight: bold;
+}
+
+.secondary-color {
+    color: rgb(204, 201, 220);
+    font-family: 'New Amsterdam', sans-serif;
+}
+
+.title-container {
+    color: rgb(0, 148, 198);
+    display: flex;
+    gap: 0.5rem;
+    font-family: 'New Amsterdam', sans-serif;
+
+    &.roles-block {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.name-title {
+    color: rgb(0, 148, 198);
+    flex-wrap: wrap;
+}
+
+.job-title {
+    color: rgb(204, 201, 220);
+}
+
+.small-screen-animation {
+    margin-top: 6rem !important;
+    width: 100%;
+}
+
+.multiple-words-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .inline-words {
+        display: flex;
+        gap: 0.6rem;
+        width: 100%;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .block-words {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .projects-button-wrapper {
+        &.inline-button {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
