@@ -2,11 +2,12 @@ import { Container } from 'react-bootstrap';
 import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
 import ImageAndTitleComponent from '../components/ImageAndTitleComponent/ImageAndTitleComponent';
 import AboutComponent from '../components/AboutComponent/AboutComponent';
-import WorkComponent from '../components/WorkComponent';
+import WorkComponent from '../components/WorkComponent/WorkComponent';
 import ExperienceComponent from '../components/ExperienceComponent';
 import { useRef } from 'react';
 import ContactComponent from '../components/ContactComponent/ContactComponent';
 import FooterComponent from '../components/FooterComponent';
+import QuoteComponent from '../components/QuoteComponent/QuoteComponent';
 
 const HomePage = () => {
     const Ref1 = useRef(null);
@@ -55,6 +56,9 @@ const HomePage = () => {
             </div>
             <div ref={Ref2}>
                 <AboutComponent />
+            </div>
+            <div>
+                <QuoteComponent />
             </div>
             <div ref={Ref3}>
                 <WorkComponent />

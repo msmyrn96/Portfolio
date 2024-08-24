@@ -19,12 +19,10 @@ const SidebarComponent = ({
     const hasOverlayVariable = `${isOpen ? 'overlay' : ''}`;
 
     return (
-        <div className="d-block d-md-none d-lg-none d-block h-100 me-5">
+        <div className="d-flex d-md-none d-lg-none d-block h-100 me-5 hamburger-container">
             <img
                 style={{
                     position: 'relative',
-                    top: '50%',
-                    transform: 'translateY(-50%)',
                     height: '25px',
                     cursor: 'pointer'
                 }}
