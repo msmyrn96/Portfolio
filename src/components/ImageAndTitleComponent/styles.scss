@@ -3,26 +3,20 @@
 .word-wrapper {
     color: $primary-color;
     font-weight: bold;
+    font-family: initial;
 }
 
 .secondary-text {
     color: $secondary-color;
-    font-family: 'New Amsterdam', sans-serif;
-}
+    transition: all 500ms;
+    cursor: pointer;
 
-.animation-text {
-    animation: animation-colors 1s infinite;
-}
+    &.secondary-font-family {
+        font-family: 'New Amsterdam', sans-serif;
+    }
 
-@keyframes animation-colors {
-    0% {
-        color: $secondary-color;
-    }
-    50% {
-        color: $primary-color;
-    }
-    100% {
-        color: $secondary-color;
+    &:hover {
+        font-size: 150%;
     }
 }
 

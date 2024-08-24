@@ -3,21 +3,14 @@ import secondaryImage from '../../assets/pic3.jpg';
 import { useResponsive } from 'ahooks';
 import './styles.scss';
 import { text } from './constants/constants';
+import { convertTextToList } from '../../hooks/helpers';
 
 const AboutComponent = () => {
     const { xl, md } = useResponsive();
     const smallerScreensLayout = !xl;
     const smallScreensEnabled = !md;
 
-    const convertTextToList = (text) => {
-        return text.split('\n');
-    };
-
     const infoList = convertTextToList(text);
-
-    console.log(convertTextToList(text));
-
-    console.log(xl);
 
     return (
         <Container fluid className="p-0">
@@ -53,7 +46,9 @@ const AboutComponent = () => {
                         >
                             <ul
                                 className={`info-list ${
-                                    smallScreensEnabled ? 'less-padding' : ''
+                                    smallScreensEnabled
+                                        ? 'less-padding gap-enabled'
+                                        : ''
                                 }`}
                             >
                                 {infoList.map((item) => {
