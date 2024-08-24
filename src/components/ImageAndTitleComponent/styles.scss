@@ -1,15 +1,33 @@
+@import '../../utils/variables';
+
 .word-wrapper {
-    color: rgb(0, 148, 198);
+    color: $primary-color;
     font-weight: bold;
 }
 
 .secondary-text {
-    color: rgb(204, 201, 220);
+    color: $secondary-color;
     font-family: 'New Amsterdam', sans-serif;
 }
 
+.animation-text {
+    animation: animation-colors 1s infinite;
+}
+
+@keyframes animation-colors {
+    0% {
+        color: $secondary-color;
+    }
+    50% {
+        color: $primary-color;
+    }
+    100% {
+        color: $secondary-color;
+    }
+}
+
 .title-container {
-    color: rgb(0, 148, 198);
+    color: $primary-color;
     display: flex;
     gap: 0.5rem;
     font-family: 'New Amsterdam', sans-serif;
@@ -21,13 +39,13 @@
 }
 
 .name-title {
-    color: rgb(0, 148, 198);
+    color: $primary-color;
     flex-wrap: wrap;
     padding: 0 2rem;
 }
 
 .job-title {
-    color: rgb(204, 201, 220);
+    color: $secondary-color;
 }
 
 .small-screen-animation {

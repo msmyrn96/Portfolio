@@ -5,8 +5,19 @@ import './styles.scss';
 import { text } from './constants/constants';
 
 const AboutComponent = () => {
-    const { xl } = useResponsive();
+    const { xl, md } = useResponsive();
     const smallerScreensLayout = !xl;
+    const smallScreensEnabled = !md;
+
+    const convertTextToList = (text) => {
+        return text.split('\n');
+    };
+
+    const infoList = convertTextToList(text);
+
+    console.log(convertTextToList(text));
+
+    console.log(xl);
 
     return (
         <Container fluid className="p-0">
@@ -40,7 +51,21 @@ const AboutComponent = () => {
                                     : 'col-5 m-5 mb-4'
                             }`}
                         >
-                            <h4 className="about-text">{text}</h4>
+                            <ul
+                                className={`info-list ${
+                                    smallScreensEnabled ? 'less-padding' : ''
+                                }`}
+                            >
+                                {infoList.map((item) => {
+                                    return (
+                                        <li className="blink-point">
+                                            <h4 className="about-text">
+                                                {item}
+                                            </h4>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
                         </Col>
                     </Row>
                 </div>

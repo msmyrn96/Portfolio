@@ -1,3 +1,5 @@
+@import '../../utils/variables';
+
 .row-container {
     display: flex;
     flex-direction: column;
@@ -24,4 +26,32 @@
 
 .about-container {
     margin: 0 auto;
+}
+
+.info-list {
+    --icon-space: 1.3em;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3rem;
+
+    &.less-padding {
+        padding-left: 2rem;
+    }
+
+    li {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    li:before {
+        content: '\f121'; /* FontAwesome Unicode */
+        font-family: FontAwesome;
+        display: inline-block;
+        margin-left: calc(var(--icon-space) * -1);
+        width: var(--icon-space);
+        font-size: 24px;
+    }
 }
