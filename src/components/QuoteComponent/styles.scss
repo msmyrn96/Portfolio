@@ -7,7 +7,9 @@
     justify-content: center;
 
     &.block-grid {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .name-title {
@@ -20,6 +22,10 @@
         align-items: center;
         gap: 0.5rem;
         font-family: $secondary-font;
+
+        &.extra-margin {
+            margin-left: 2rem;
+        }
 
         .author-text {
             font-family: $secondary-font;

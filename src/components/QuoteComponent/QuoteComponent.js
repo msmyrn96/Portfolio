@@ -24,7 +24,11 @@ const QuoteComponent = () => {
                     }}
                     options={defaultOptions}
                 />
-                <h1 className="name-title justify-content-center">
+                <h1
+                    className={`name-title justify-content-center ${
+                        extraSmallScreens ? 'extra-margin' : ''
+                    }`}
+                >
                     &#123; Code is like humor. When you have to explain it, it's
                     bad &#125;
                     <span className="fw-bold author-text">Cory House</span>{' '}
