@@ -1,7 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import secondaryImage from '../../assets/pic3.jpg';
 import { useResponsive } from 'ahooks';
-import './styles.scss';
+import './_styles.scss';
 import { text } from './constants/constants';
 
 const AboutComponent = () => {
