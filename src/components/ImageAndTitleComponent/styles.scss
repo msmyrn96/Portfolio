@@ -16,7 +16,7 @@
     }
 
     &:hover {
-        font-size: 150%;
+        font-size: 50px;
     }
 }
 
@@ -74,6 +74,14 @@
             display: flex;
             width: 100%;
             justify-content: center;
+        }
+
+        .have-a-look {
+            border: none;
+
+            &:hover {
+                background-color: $secondary-color;
+            }
         }
     }
 }

@@ -59,8 +59,8 @@ const ImageAndTitleComponent = () => {
                         }`}
                     >
                         <Button
-                            variant="none"
-                            className="text-white primary-color br10 mt-3 "
+                            variant="primary"
+                            className="text-white primary-color br10 mt-3 have-a-look"
                         >
                             <h4 className="p-2 m-0">Have a look</h4>
                         </Button>
