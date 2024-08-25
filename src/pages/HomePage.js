@@ -26,7 +26,7 @@ const HomePage = () => {
             case 'About':
                 Ref2.current.scrollIntoView();
                 break;
-            case 'Work':
+            case 'Projects':
                 Ref3.current.scrollIntoView();
                 break;
             case 'Experience':

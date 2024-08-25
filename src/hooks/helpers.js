@@ -16,3 +16,13 @@ export const getAnimationConfiguration = (animationData) => {
         }
     };
 };
+
+export const arrayToTwoParts = (array) => {
+    const index = array.length / 2;
+
+    const firstPart = array.slice(0, index);
+
+    const secondPart = array.slice(index);
+
+    return [firstPart, secondPart];
+};
