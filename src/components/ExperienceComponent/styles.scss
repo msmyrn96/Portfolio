@@ -1,0 +1,132 @@
+@import '../../utils/variables';
+
+.experience-wrapper {
+    .title {
+        color: $primary-color;
+    }
+
+    .bigGrid {
+        transition: transform 0.2s;
+        z-index: 0;
+
+        &.sm-screen {
+            box-shadow: none;
+
+            &:hover {
+                transform: scale(1);
+            }
+        }
+
+        &:hover {
+            -ms-transform: scale(1.5); /* IE 9 */
+            -webkit-transform: scale(1.5); /* Safari 3-8 */
+            transform: scale(1.05);
+            z-index: 100;
+            font-weight: bold;
+        }
+    }
+
+    &.sm-screen {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .vertical-line {
+        &.md-screen {
+            margin-right: 1rem !important;
+        }
+
+        &.sm-screen {
+            margin-right: 1rem !important;
+        }
+
+        .vertical {
+            height: 200px;
+            border: 1px solid $primary-color;
+            width: 3px;
+            border-radius: 10px;
+            background-color: $primary-color;
+            position: relative;
+            left: 50%;
+
+            &.md-screen {
+                height: 170px;
+            }
+
+            &.sm-screen {
+                margin-left: 1rem;
+            }
+        }
+
+        .last {
+            height: 170px;
+
+            &.md-screen {
+                height: 140px;
+            }
+
+            &.sm-screen {
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    .circle {
+        border-radius: 50%;
+        background-color: transparent;
+        border: 3px solid $primary-color;
+        height: 60px;
+        width: 60px;
+        padding: 0.5rem;
+    }
+
+    .workGrid {
+        width: 650px;
+        height: 230px;
+        display: flex;
+        align-items: center;
+
+        &.md-screen {
+            width: 500px;
+            height: 200px;
+
+            .text-container {
+                transform: scale(0.9);
+                width: 100%;
+                height: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        &.sm-screen {
+            width: 350px;
+            height: 200px;
+
+            &.current-work {
+                background-color: $primary-color !important;
+                background-image: linear-gradient(
+                        0deg,
+                        $primary-color,
+                        $primary-color
+                    ),
+                    linear-gradient(0deg, $white, $white);
+                background-clip: content-box, padding-box;
+                border: 3px solid $primary-color;
+                padding: 0.5rem;
+            }
+
+            .text-container {
+                transform: scale(0.7);
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .active {
+        background-color: $primary-color !important;
+        background-image: linear-gradient(0deg, $primary-color, $primary-color),
+            linear-gradient(0deg, $white, $white);
+        background-clip: content-box, padding-box;
+    }
+}

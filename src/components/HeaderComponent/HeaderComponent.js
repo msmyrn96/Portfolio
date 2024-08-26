@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import SidebarComponent from './SidebarComponent/SidebarComponent';
 import { useResponsive } from 'ahooks';
 import './styles.scss';
+import { list } from './constants';
 
 const HeaderComponent = (props) => {
-    const list = ['Home', 'About', 'Projects', 'Experience', 'Contact'];
     const [isOpen, setIsOpen] = useState(false);
     const { lg, md } = useResponsive();
     const isHeaderFixed = !md && !lg ? 'fixed' : 'relative';

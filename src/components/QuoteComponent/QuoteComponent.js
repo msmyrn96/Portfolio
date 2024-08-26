@@ -2,7 +2,7 @@ import { Container } from 'react-bootstrap';
 import Lottie from 'react-lottie';
 import { useResponsive } from 'ahooks';
 import './styles.scss';
-import { defaultOptions } from './constants/constants';
+import { defaultOptions } from './constants';
 
 const QuoteComponent = () => {
     const { sm, md } = useResponsive();

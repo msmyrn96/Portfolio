@@ -2,7 +2,7 @@ import { Col, Row, Button } from 'react-bootstrap';
 import Lottie from 'react-lottie';
 import './styles.scss';
 import { useResponsive } from 'ahooks';
-import { defaultOptions, title } from './constants/constants';
+import { defaultOptions, title } from './constants';
 
 const ImageAndTitleComponent = () => {
     const { sm, md } = useResponsive();

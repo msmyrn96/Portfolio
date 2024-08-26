@@ -50,45 +50,6 @@ code {
     background-color: $secondary-color;
 }
 
-.bigGrid {
-    transition: transform 0.2s;
-    z-index: 0;
-}
-.bigGrid:hover {
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
-    transform: scale(1.05);
-    z-index: 100;
-    font-weight: bold;
-}
-
-.circle {
-    border-radius: 50%;
-    background-color: transparent;
-    border: 3px solid $primary-color;
-    height: 60px;
-    width: 60px;
-}
-.workGrid {
-    width: 800px;
-    height: 230px;
-}
-.vertical {
-    height: 200px;
-    border: 1px solid $primary-color;
-    width: 3px;
-    border-radius: 10px;
-    background-color: $primary-color;
-    position: relative;
-    left: 50%;
-}
-.active {
-    background-color: $primary-color !important;
-    border: none !important;
-}
-.last {
-    height: 170px !important;
-}
 .inputContact {
     background-color: transparent;
     border: none;

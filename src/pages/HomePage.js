@@ -3,7 +3,7 @@ import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
 import ImageAndTitleComponent from '../components/ImageAndTitleComponent/ImageAndTitleComponent';
 import AboutComponent from '../components/AboutComponent/AboutComponent';
 import WorkComponent from '../components/WorkComponent/WorkComponent';
-import ExperienceComponent from '../components/ExperienceComponent';
+import ExperienceComponent from '../components/ExperienceComponent/ExperienceComponent';
 import { useRef } from 'react';
 import ContactComponent from '../components/ContactComponent/ContactComponent';
 import FooterComponent from '../components/FooterComponent';

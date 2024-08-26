@@ -1,4 +1,4 @@
-import { viewCode } from '../components/WorkComponent/constants/constants';
+import { viewCode } from '../components/WorkComponent/constants';
 import project_image from '../assets/web-programming 1.png';
 import git from '../assets/github 1.png';
 

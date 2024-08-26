@@ -2,7 +2,7 @@ import { Container } from 'react-bootstrap';
 import project_image from '../../assets/web-programming 1.png';
 import git from '../../assets/github 1.png';
 import { visitCode } from '../../hooks/helpers';
-import { projects, title, viewCode } from './constants/constants';
+import { projects, title, viewCode } from './constants';
 import './styles.scss';
 import { useResponsive } from 'ahooks';
 import Carousel from '../CarouselComponent/CarouselComponent';

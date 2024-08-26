@@ -2,7 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import secondaryImage from '../../assets/pic3.jpg';
 import { useResponsive } from 'ahooks';
 import './styles.scss';
-import { text } from './constants/constants';
+import { text } from './constants';
 import { convertTextToList } from '../../hooks/helpers';
 
 const AboutComponent = () => {
