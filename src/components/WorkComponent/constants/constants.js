@@ -1,4 +1,6 @@
-export const jobs = [
+export const title = 'Projects';
+export const viewCode = 'View my code';
+export const projects = [
     {
         title: 'Portfolio',
         description:

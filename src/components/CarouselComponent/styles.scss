@@ -1,0 +1,39 @@
+@import '../../utils/variables';
+
+.carousel {
+    .slide-container {
+        position: absolute;
+        width: 100%;
+        top: 10%;
+
+        .slide-direction {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+
+            .right,
+            .left {
+                border-radius: 50%;
+                width: 45px;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.5rem;
+
+                &:hover {
+                    background-color: $primary-color;
+                }
+            }
+
+            .right-arrow {
+                fill: $white;
+            }
+
+            .left-arrow {
+                fill: $white;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
