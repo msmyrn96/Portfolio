@@ -1,13 +1,10 @@
-import { Container, Form, Row, Col, Modal, Button } from 'react-bootstrap';
-import MapContainer from '../MapContainer/MapContainer';
+import { Container, Form, Modal, Button } from 'react-bootstrap';
 import send from '../../assets/Group.png';
 import { useState } from 'react';
-import emailkey from '../../emailkey';
-import emailjs, { init } from 'emailjs-com';
 import tic from '../../assets/checked 1.png';
 import './styles.scss';
-
-init('user_py7ZjoQhL02zv6XNCjNN9');
+import { sumbitEmail } from '../../hooks/helpers';
+import { TypeAnimation } from 'react-type-animation';
 
 const ContactComponent = () => {
     const [show, setShow] = useState(false);
@@ -17,6 +14,15 @@ const ContactComponent = () => {
     const [subject, setSubject] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+
+    const handleReset = () => {
+        document.getElementById('form').reset();
+        setName('');
+        setSubject('');
+        setEmail('');
+        setMessage('');
+        handleClose();
+    };
 
     const handleChange = (e) => {
         console.log(e.target.name);
@@ -38,32 +44,13 @@ const ContactComponent = () => {
         }
     };
 
-    const sumbitEmail = () => {
-        const form = {
-            Subject: subject,
-            from_name: name,
-            to_name: 'Emmanouil Smyrnakis',
-            email_from: email,
-            message: message
-        };
-
-        emailjs.send(emailkey.SERVICE_ID, emailkey.TEMPLATE_ID, form).then(
-            function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-            },
-            function (err) {
-                console.log('FAILED...', err);
-            }
-        );
-        handleShow();
-    };
-
     return (
         <Container className="w-100 p-0 m-0" fluid>
-            <div className="marginBig text-white fw-bold secondary-color pt-5 pb-5">
-                <Row>
-                    <Col className="mb-5">
-                        <Form className="w-50 col-7 offset-3">
+            <div className="marginBig fw-bold secondary-color pt-5 pb-5 contact-container">
+                <h1 className="fw-bold text-white text-center">Contact</h1>
+                <div className="mt-5 animation-form-wrapper">
+                    <div className="form-wrapper">
+                        <Form className="form-container" id="form">
                             <Form.Group
                                 className="mb-3"
                                 controlId="exampleForm.ControlInput1"
@@ -71,7 +58,7 @@ const ContactComponent = () => {
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control
                                     name="name"
-                                    className="inputContact ps-0"
+                                    className="inputContact"
                                     type="name"
                                     placeholder="Enter your name"
                                     onChange={handleChange}
@@ -83,7 +70,7 @@ const ContactComponent = () => {
                             >
                                 <Form.Label>Email</Form.Label>
                                 <Form.Control
-                                    className="inputContact ps-0"
+                                    className="inputContact"
                                     type="name"
                                     placeholder="Enter your email"
                                     name="email"
@@ -97,7 +84,7 @@ const ContactComponent = () => {
                                 <Form.Label>Subject</Form.Label>
                                 <Form.Control
                                     onChange={handleChange}
-                                    className="inputContact ps-0"
+                                    className="inputContact"
                                     type="name"
                                     placeholder="Enter your subject"
                                     name="subject"
@@ -110,7 +97,7 @@ const ContactComponent = () => {
                                 <Form.Label>Message</Form.Label>
                                 <Form.Control
                                     onChange={handleChange}
-                                    className="inputContact ps-0"
+                                    className="inputContact"
                                     as="textarea"
                                     rows={2}
                                     placeholder="Type your message here..."
@@ -118,21 +105,48 @@ const ContactComponent = () => {
                                 />
                             </Form.Group>
                         </Form>
-                    </Col>
+                        <div
+                            style={{ cursor: 'pointer' }}
+                            className="circleButton"
+                            onClick={() =>
+                                sumbitEmail(
+                                    {
+                                        email: email,
+                                        name: name,
+                                        subject: subject,
+                                        message: message
+                                    },
+                                    handleShow
+                                )
+                            }
+                        >
+                            <img src={send} alt="send" />
+                        </div>
+                    </div>
 
-                    <Col className="col-5 mb-5 map-wrapper pe-sm-4">
-                        <MapContainer />
-                    </Col>
-                </Row>
-                <div className="d-flex justify-content-center ">
-                    <div
-                        style={{ cursor: 'pointer' }}
-                        className="circleButton mb-5"
-                        onClick={sumbitEmail}
-                    >
-                        <img src={send} alt="send" />
+                    <div className="col-6 pe-sm-4 email-animation-container">
+                        <div className="type-animation-wrapper">
+                            <h1 className="type-animation">
+                                Let's have{' '}
+                                <TypeAnimation
+                                    sequence={[
+                                        ' a quick chat',
+                                        1000,
+                                        'a dive into some ideas',
+                                        1000,
+                                        ' a coffee first',
+                                        1000
+                                    ]}
+                                    wrapper="span"
+                                    speed={30}
+                                    className='"secondary-text'
+                                    repeat={Infinity}
+                                />
+                            </h1>
+                        </div>
                     </div>
                 </div>
+                <div className="d-flex justify-content-center "></div>
             </div>
 
             <Modal className="text-center" show={show} onHide={handleClose}>
@@ -151,7 +165,7 @@ const ContactComponent = () => {
                 <Modal.Footer className="d-flex justify-content-center">
                     <Button
                         style={{ backgroundColor: '#0094C6' }}
-                        onClick={handleClose}
+                        onClick={handleReset}
                     >
                         Close
                     </Button>

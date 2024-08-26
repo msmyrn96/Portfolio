@@ -1,6 +1,10 @@
 import { viewCode } from '../components/WorkComponent/constants';
 import project_image from '../assets/web-programming 1.png';
 import git from '../assets/github 1.png';
+import emailkey from '../emailkey';
+import emailjs, { init } from 'emailjs-com';
+
+init('user_py7ZjoQhL02zv6XNCjNN9');
 
 export const convertTextToList = (text) => {
     return text.split(/\.|\n/).filter((sentence) => sentence.trim() !== '');
@@ -72,4 +76,24 @@ export const projectsToItems = (projects) => {
     });
 
     return itemsArray;
+};
+
+export const sumbitEmail = (data, handleShow) => {
+    const form = {
+        Subject: data.subject,
+        from_name: data.name,
+        to_name: 'Emmanouil Smyrnakis',
+        email_from: data.email,
+        message: data.message
+    };
+
+    emailjs.send(emailkey.SERVICE_ID, emailkey.TEMPLATE_ID, form).then(
+        function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+        },
+        function (err) {
+            console.log('FAILED...', err);
+        }
+    );
+    handleShow();
 };
