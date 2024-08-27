@@ -7,8 +7,19 @@
         align-items: center;
         justify-content: center;
 
+        &.small-screens,
+        &.extra-small-screens {
+            flex-direction: column-reverse;
+        }
+
         .form-wrapper {
             width: 45%;
+
+            &.small-screens,
+            &.extra-small-screens {
+                width: auto;
+            }
+
             position: relative;
             margin-bottom: 3rem;
             display: flex;
@@ -44,7 +55,6 @@
                 width: 100px;
                 position: absolute;
                 top: 90%;
-                left: 45%;
                 border: 2px solid $primary-color;
             }
 
@@ -63,18 +73,45 @@
             display: flex;
             justify-content: center;
 
+            &.small-screens {
+                min-height: 180px;
+                align-items: flex-start;
+            }
+
+            &.extra-small-screens {
+                min-height: 200px;
+                align-items: flex-start;
+            }
+
             .type-animation-wrapper {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 margin-left: 2rem;
+                margin-bottom: 2rem;
+
+                &.small-screens,
+                &.extra-small-screens {
+                    margin-left: 0 !important;
+                    text-align: center;
+                }
 
                 .type-animation,
                 .type-animation > span {
                     color: $white;
                     font-family: $secondary-font;
-                    font-size: 64px;
+                    font-size: 72px;
+
+                    &.small-screens,
+                    &.small-screens > span {
+                        font-size: 52px;
+                    }
+
+                    &.extra-small-screens,
+                    &.extra-small-screens > span {
+                        font-size: 44px !important;
+                    }
                 }
 
                 .type-animation {

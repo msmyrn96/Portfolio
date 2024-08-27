@@ -5,6 +5,7 @@ import tic from '../../assets/checked 1.png';
 import './styles.scss';
 import { sumbitEmail } from '../../hooks/helpers';
 import { TypeAnimation } from 'react-type-animation';
+import { useResponsive } from 'ahooks';
 
 const ContactComponent = () => {
     const [show, setShow] = useState(false);
@@ -14,6 +15,9 @@ const ContactComponent = () => {
     const [subject, setSubject] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const { sm, md } = useResponsive();
+    const isSmallScreens = !md;
+    const isExtraSmallScreens = !sm;
 
     const handleReset = () => {
         document.getElementById('form').reset();
@@ -48,8 +52,24 @@ const ContactComponent = () => {
         <Container className="w-100 p-0 m-0" fluid>
             <div className="marginBig fw-bold secondary-color pt-5 pb-5 contact-container">
                 <h1 className="fw-bold text-white text-center">Contact</h1>
-                <div className="mt-5 animation-form-wrapper">
-                    <div className="form-wrapper">
+                <div
+                    className={`mt-5 animation-form-wrapper ${
+                        isExtraSmallScreens
+                            ? 'extra-small-screens'
+                            : isSmallScreens
+                            ? 'small-screens'
+                            : ''
+                    }`}
+                >
+                    <div
+                        className={`form-wrapper  ${
+                            isExtraSmallScreens
+                                ? 'extra-small-screens'
+                                : isSmallScreens
+                                ? 'small-screens'
+                                : ''
+                        }`}
+                    >
                         <Form className="form-container" id="form">
                             <Form.Group
                                 className="mb-3"
@@ -124,9 +144,33 @@ const ContactComponent = () => {
                         </div>
                     </div>
 
-                    <div className="col-6 pe-sm-4 email-animation-container">
-                        <div className="type-animation-wrapper">
-                            <h1 className="type-animation">
+                    <div
+                        className={`col-6 email-animation-container  ${
+                            isExtraSmallScreens
+                                ? 'extra-small-screens'
+                                : isSmallScreens
+                                ? 'small-screens'
+                                : ''
+                        }`}
+                    >
+                        <div
+                            className={`type-animation-wrapper ${
+                                isExtraSmallScreens
+                                    ? 'extra-small-screens'
+                                    : isSmallScreens
+                                    ? 'small-screens'
+                                    : ''
+                            }`}
+                        >
+                            <h1
+                                className={`type-animation ${
+                                    isExtraSmallScreens
+                                        ? 'extra-small-screens'
+                                        : isSmallScreens
+                                        ? 'small-screens'
+                                        : ''
+                                }`}
+                            >
                                 Let's have{' '}
                                 <TypeAnimation
                                     sequence={[
