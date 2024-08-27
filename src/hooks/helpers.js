@@ -78,22 +78,22 @@ export const projectsToItems = (projects) => {
     return itemsArray;
 };
 
-export const sumbitEmail = (data, handleShow) => {
-    const form = {
-        Subject: data.subject,
-        from_name: data.name,
-        to_name: 'Emmanouil Smyrnakis',
-        email_from: data.email,
-        message: data.message
-    };
+export const sumbitEmail = (currentForm, data, handleShow) => {
+    emailjs
+        .sendForm(
+            emailkey.SERVICE_ID,
+            emailkey.TEMPLATE_ID,
+            currentForm.current,
+            emailkey.USER_ID
+        )
+        .then(
+            () => {
+                console.log('SUCCESS!');
+            },
+            (error) => {
+                console.log('FAILED...', error.text);
+            }
+        );
 
-    emailjs.send(emailkey.SERVICE_ID, emailkey.TEMPLATE_ID, form).then(
-        function (response) {
-            console.log('SUCCESS!', response.status, response.text);
-        },
-        function (err) {
-            console.log('FAILED...', err);
-        }
-    );
     handleShow();
 };

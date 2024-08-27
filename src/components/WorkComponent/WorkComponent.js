@@ -53,8 +53,8 @@ const WorkComponent = () => {
     };
 
     return (
-        <Container className="w-100 p-0 m-0" fluid>
-            <div className="marginBig text-white fw-bold secondary-color">
+        <Container className="w-100 p-0 " fluid>
+            <div className=" text-white fw-bold secondary-color margin-big">
                 <h1 className="fw-bold text-center pt-5">{title}</h1>
                 <div className={`scrolls ms-0 ${isSmallScreens ? '' : 'ps-4'}`}>
                     {!isSmallScreens ? (

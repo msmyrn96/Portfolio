@@ -13,7 +13,7 @@ const ExperienceComponent = () => {
     return (
         <Container className="w-100 p-0 m-0" fluid>
             <div
-                className={`marginBig mb-5 experience-wrapper  ${
+                className={`margin-big mb-5 experience-wrapper  ${
                     isExtraSmallScreens
                         ? 'sm-screen'
                         : isSmallScreens
@@ -21,9 +21,7 @@ const ExperienceComponent = () => {
                         : ''
                 }`}
             >
-                <h1 className="fw-bold text-center pt-5 mb-5 title">
-                    Experience
-                </h1>
+                <h1 className="fw-bold text-center mb-5 title">Experience</h1>
                 {works.map((work, index) => {
                     const isNotLastItem = index !== works.length - 1;
                     const currentWork = index === 0;

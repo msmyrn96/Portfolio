@@ -12,7 +12,7 @@ const QuoteComponent = () => {
     return (
         <Container className="w-100 p-0 m-0" fluid>
             <div
-                className={`marginBig animation-container ${
+                className={`margin-medium animation-container ${
                     smallScreens ? 'block-grid' : ''
                 }`}
             >

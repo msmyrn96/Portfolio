@@ -40,9 +40,19 @@ code {
 .textColor {
     color: $primary-color;
 }
-.marginBig {
-    margin-top: 10rem;
+
+.margin-big {
+    margin-top: $margin-big;
 }
+
+.margin-medium {
+    margin-top: $margin-medium;
+}
+
+.margin-small {
+    margin-top: $margin-small;
+}
+
 .w80 {
     width: 90%;
 }

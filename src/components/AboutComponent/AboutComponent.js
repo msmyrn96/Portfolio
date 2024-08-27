@@ -14,7 +14,7 @@ const AboutComponent = () => {
 
     return (
         <Container fluid className="p-0">
-            <div className="marginBig">
+            <div className="margin-big">
                 <div className="text-white br10 primary-color w80 shadowbox about-container">
                     <h1 className="fw-bold text-center pt-5">About</h1>
                     <Row

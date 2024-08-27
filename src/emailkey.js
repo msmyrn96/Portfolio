@@ -1,7 +1,7 @@
-const defaultValue= {
-    USER_ID: `user_py7ZjoQhL02zv6XNCjNN9`, //userID
-    TEMPLATE_ID: `template_b2j1ma4`,         //templateID
-    SERVICE_ID:'service_sp0z9sq',
-}
+const defaultValue = {
+    USER_ID: `LV8-fM_Caogz8EEDJ`, //userID
+    TEMPLATE_ID: `template_zucrbwm`, //templateID
+    SERVICE_ID: 'service_f2x3v54'
+};
 
 export default defaultValue;

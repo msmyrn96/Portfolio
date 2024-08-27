@@ -1,11 +1,13 @@
 import { Container, Form, Modal, Button } from 'react-bootstrap';
 import send from '../../assets/Group.png';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import tic from '../../assets/checked 1.png';
 import './styles.scss';
 import { sumbitEmail } from '../../hooks/helpers';
 import { TypeAnimation } from 'react-type-animation';
 import { useResponsive } from 'ahooks';
+import { defaultOptions } from './constants';
+import Lottie from 'react-lottie';
 
 const ContactComponent = () => {
     const [show, setShow] = useState(false);
@@ -18,6 +20,7 @@ const ContactComponent = () => {
     const { sm, md } = useResponsive();
     const isSmallScreens = !md;
     const isExtraSmallScreens = !sm;
+    const formRef = useRef();
 
     const handleReset = () => {
         document.getElementById('form').reset();
@@ -29,15 +32,14 @@ const ContactComponent = () => {
     };
 
     const handleChange = (e) => {
-        console.log(e.target.name);
         switch (e.target.name) {
-            case 'name':
+            case 'from_name':
                 setName(e.target.value);
                 break;
             case 'subject':
                 setSubject(e.target.value);
                 break;
-            case 'email':
+            case 'email_from':
                 setEmail(e.target.value);
                 break;
             case 'message':
@@ -49,8 +51,8 @@ const ContactComponent = () => {
     };
 
     return (
-        <Container className="w-100 p-0 m-0" fluid>
-            <div className="marginBig fw-bold secondary-color pt-5 pb-5 contact-container">
+        <Container className="w-100 p-0 m-0 big-container" fluid>
+            <div className="margin-big fw-bold secondary-color pt-5 pb-5 contact-container">
                 <h1 className="fw-bold text-white text-center">Contact</h1>
                 <div
                     className={`mt-5 animation-form-wrapper ${
@@ -70,14 +72,18 @@ const ContactComponent = () => {
                                 : ''
                         }`}
                     >
-                        <Form className="form-container" id="form">
+                        <Form
+                            className="form-container"
+                            id="form"
+                            ref={formRef}
+                        >
                             <Form.Group
                                 className="mb-3"
                                 controlId="exampleForm.ControlInput1"
                             >
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control
-                                    name="name"
+                                    name="from_name"
                                     className="inputContact"
                                     type="name"
                                     placeholder="Enter your name"
@@ -93,7 +99,7 @@ const ContactComponent = () => {
                                     className="inputContact"
                                     type="name"
                                     placeholder="Enter your email"
-                                    name="email"
+                                    name="email_from"
                                     onChange={handleChange}
                                 />
                             </Form.Group>
@@ -130,6 +136,7 @@ const ContactComponent = () => {
                             className="circleButton"
                             onClick={() =>
                                 sumbitEmail(
+                                    formRef,
                                     {
                                         email: email,
                                         name: name,
@@ -193,24 +200,27 @@ const ContactComponent = () => {
                 <div className="d-flex justify-content-center "></div>
             </div>
 
-            <Modal className="text-center" show={show} onHide={handleClose}>
+            <Modal
+                className="text-center modal-container"
+                show={show}
+                onHide={handleClose}
+            >
                 <Modal.Header>
                     <Modal.Title>Email was sent!</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="text-center">
-                    <img
-                        style={{ width: 60, height: 60 }}
-                        src={tic}
-                        alt="tic"
+                    <Lottie
+                        style={{
+                            width: '30%',
+                            height: '30%'
+                        }}
+                        options={defaultOptions}
                     />
                     <div className="mt-2">Thank you for contacting me!</div>
                     You will receive a reply shortly!
                 </Modal.Body>
                 <Modal.Footer className="d-flex justify-content-center">
-                    <Button
-                        style={{ backgroundColor: '#0094C6' }}
-                        onClick={handleReset}
-                    >
+                    <Button className="close-button" onClick={handleReset}>
                         Close
                     </Button>
                 </Modal.Footer>

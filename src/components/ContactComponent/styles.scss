@@ -1,124 +1,147 @@
 @import '../../utils/variables';
 
-.contact-container {
-    .animation-form-wrapper {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &.small-screens,
-        &.extra-small-screens {
-            flex-direction: column-reverse;
-        }
-
-        .form-wrapper {
-            width: 45%;
-
-            &.small-screens,
-            &.extra-small-screens {
-                width: auto;
-            }
-
-            position: relative;
-            margin-bottom: 3rem;
+.big-container {
+    .contact-container {
+        .animation-form-wrapper {
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
 
-            .form-container {
-                width: 100%;
-                max-width: 600px;
-                background-color: $white;
-                padding: 3rem;
-                border-radius: 10px;
-                border: 2px solid $primary-color;
-
-                label {
-                    color: $primary-color;
-                }
-
-                .form-control {
-                    &:hover,
-                    &:active,
-                    &:focus {
-                        border: 1px solid $primary-color;
-                        box-shadow: none;
-                    }
-                }
-            }
-
-            .circleButton {
-                border-radius: 50%;
-                background-color: $white;
-                height: 100px;
-                width: 100px;
-                position: absolute;
-                top: 90%;
-                border: 2px solid $primary-color;
-            }
-
-            .circleButton img {
-                position: absolute;
-                width: 60px;
-                height: auto;
-                top: 50%;
-                left: 50%;
-                margin-right: -50%;
-                transform: translate(-50%, -50%);
-            }
-        }
-
-        .email-animation-container {
-            display: flex;
-            justify-content: center;
-
-            &.small-screens {
-                min-height: 180px;
-                align-items: flex-start;
-            }
-
+            &.small-screens,
             &.extra-small-screens {
-                min-height: 200px;
-                align-items: flex-start;
+                flex-direction: column-reverse;
             }
 
-            .type-animation-wrapper {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                margin-left: 2rem;
-                margin-bottom: 2rem;
+            .form-wrapper {
+                width: 45%;
 
                 &.small-screens,
                 &.extra-small-screens {
-                    margin-left: 0 !important;
-                    text-align: center;
+                    width: auto;
                 }
 
-                .type-animation,
-                .type-animation > span {
-                    color: $white;
-                    font-family: $secondary-font;
-                    font-size: 72px;
+                position: relative;
+                margin-bottom: 3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-                    &.small-screens,
-                    &.small-screens > span {
-                        font-size: 52px;
-                    }
+                .form-container {
+                    width: 100%;
+                    max-width: 600px;
+                    background-color: $white;
+                    padding: 3rem;
+                    border-radius: 10px;
+                    border: 2px solid $primary-color;
 
-                    &.extra-small-screens,
-                    &.extra-small-screens > span {
-                        font-size: 44px !important;
-                    }
-                }
-
-                .type-animation {
-                    span {
+                    label {
                         color: $primary-color;
                     }
+
+                    .form-control {
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            border: 1px solid $primary-color;
+                            box-shadow: none;
+                        }
+                    }
                 }
+
+                .circleButton {
+                    border-radius: 50%;
+                    background-color: $white;
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    top: 90%;
+                    border: 2px solid $primary-color;
+                }
+
+                .circleButton img {
+                    position: absolute;
+                    width: 60px;
+                    height: auto;
+                    top: 50%;
+                    left: 50%;
+                    margin-right: -50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .email-animation-container {
+                display: flex;
+                justify-content: center;
+
+                &.small-screens {
+                    min-height: 180px;
+                    align-items: flex-start;
+                }
+
+                &.extra-small-screens {
+                    min-height: 200px;
+                    align-items: flex-start;
+                }
+
+                .type-animation-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 2rem;
+                    margin-bottom: 2rem;
+
+                    &.small-screens,
+                    &.extra-small-screens {
+                        margin-left: 0 !important;
+                        text-align: center;
+                    }
+
+                    .type-animation,
+                    .type-animation > span {
+                        color: $white;
+                        font-family: $secondary-font;
+                        font-size: 72px;
+
+                        &.small-screens,
+                        &.small-screens > span {
+                            font-size: 52px;
+                        }
+
+                        &.extra-small-screens,
+                        &.extra-small-screens > span {
+                            font-size: 44px !important;
+                        }
+                    }
+
+                    .type-animation {
+                        span {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal-container {
+    padding-right: 0%;
+
+    .modal-dialog {
+        top: 30%;
+
+        .modal-title {
+            color: $primary-color;
+        }
+
+        .close-button {
+            background-color: $primary-color;
+            border: none;
+
+            &:hover {
+                background-color: $secondary-color;
             }
         }
     }
