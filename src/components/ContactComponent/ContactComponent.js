@@ -1,7 +1,6 @@
 import { Container, Form, Modal, Button } from 'react-bootstrap';
 import send from '../../assets/Group.png';
 import { useRef, useState } from 'react';
-import tic from '../../assets/checked 1.png';
 import './styles.scss';
 import { sumbitEmail } from '../../hooks/helpers';
 import { TypeAnimation } from 'react-type-animation';

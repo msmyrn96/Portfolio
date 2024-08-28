@@ -6,7 +6,7 @@ import WorkComponent from '../components/WorkComponent/WorkComponent';
 import ExperienceComponent from '../components/ExperienceComponent/ExperienceComponent';
 import { useRef } from 'react';
 import ContactComponent from '../components/ContactComponent/ContactComponent';
-import FooterComponent from '../components/FooterComponent';
+import FooterComponent from '../components/FooterComponent/FooterComponent';
 import QuoteComponent from '../components/QuoteComponent/QuoteComponent';
 
 const HomePage = () => {
