@@ -79,8 +79,10 @@
         .have-a-look {
             border: none;
 
-            &:hover {
-                background-color: $secondary-color;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: $secondary-color !important;
             }
         }
     }

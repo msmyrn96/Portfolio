@@ -21,19 +21,34 @@ const HomePage = () => {
 
         switch (myRef) {
             case 'Home':
-                Ref1.current.scrollIntoView();
+                Ref1.current.scrollIntoView({
+                    block: 'nearest',
+                    behavior: 'smooth'
+                });
                 break;
             case 'About':
-                Ref2.current.scrollIntoView();
+                Ref2.current.scrollIntoView({
+                    block: 'nearest',
+                    behavior: 'smooth'
+                });
                 break;
             case 'Projects':
-                Ref3.current.scrollIntoView();
+                Ref3.current.scrollIntoView({
+                    block: 'nearest',
+                    behavior: 'smooth'
+                });
                 break;
             case 'Experience':
-                Ref4.current.scrollIntoView();
+                Ref4.current.scrollIntoView({
+                    block: 'nearest',
+                    behavior: 'smooth'
+                });
                 break;
             case 'Contact':
-                Ref5.current.scrollIntoView();
+                Ref5.current.scrollIntoView({
+                    block: 'nearest',
+                    behavior: 'smooth'
+                });
                 break;
             default:
                 break;
@@ -52,7 +67,7 @@ const HomePage = () => {
                 }}
             />
             <div ref={Ref1}>
-                <ImageAndTitleComponent />
+                <ImageAndTitleComponent scrollIntoView={executeScroll} />
             </div>
             <div ref={Ref2}>
                 <AboutComponent />

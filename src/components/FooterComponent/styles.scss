@@ -1,7 +1,21 @@
 @import '../../utils/variables';
 
 .footer-container {
+    color: $primary-color !important;
+
     .icons {
         margin-left: 1.5rem;
+
+        svg,
+        path,
+        circle,
+        polygon {
+            color: $primary-color !important;
+            stroke: $primary-color !important;
+        }
+
+        svg {
+            fill: $primary-color !important;
+        }
     }
 }

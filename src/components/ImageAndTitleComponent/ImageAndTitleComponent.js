@@ -4,7 +4,7 @@ import './styles.scss';
 import { useResponsive } from 'ahooks';
 import { defaultOptions, title } from './constants';
 
-const ImageAndTitleComponent = () => {
+const ImageAndTitleComponent = ({ scrollIntoView }) => {
     const { sm, md } = useResponsive();
     const smallScreens = !md;
     const extraSmallScreens = !sm;
@@ -61,6 +61,7 @@ const ImageAndTitleComponent = () => {
                         <Button
                             variant="primary"
                             className="text-white primary-color br10 mt-3 have-a-look"
+                            onClick={() => scrollIntoView('Projects')}
                         >
                             <h4 className="p-2 m-0">Have a look</h4>
                         </Button>

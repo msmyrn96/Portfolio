@@ -37,7 +37,7 @@ const FooterComponent = () => {
                 </div>
                 <div className="mb-4">
                     <h5 className="fw-bold">
-                        ©2021 Proudly designed and created by Emmanouil
+                        ©2024 Proudly designed and created by Emmanouil
                         Smyrnakis
                     </h5>
                 </div>
