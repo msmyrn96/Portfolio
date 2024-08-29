@@ -1,4 +1,4 @@
-import { viewCode } from '../components/WorkComponent/constants';
+import { myRepo, viewCode } from '../components/WorkComponent/constants';
 import project_image from '../assets/web-programming 1.png';
 import git from '../assets/github 1.png';
 import emailkey from '../emailkey';
@@ -11,7 +11,7 @@ export const convertTextToList = (text) => {
 };
 
 export const visitCode = (e) => {
-    window.location.href = `https://github.com/smyrn96/${e.target.id}`;
+    window.location.href = `${myRepo}${e.target.id}`;
 };
 
 export const getAnimationConfiguration = (animationData) => {
@@ -35,8 +35,8 @@ export const arrayToTwoParts = (array) => {
     return [firstPart, secondPart];
 };
 
-export const projectsToItems = (projects) => {
-    const itemsArray = projects.map((project) => {
+export const projectsToItems = (repositories) => {
+    const itemsArray = repositories.map((repo) => {
         return (
             <div
                 style={{ verticalAlign: 'top' }}
@@ -49,24 +49,24 @@ export const projectsToItems = (projects) => {
                         height={50}
                         width={50}
                     />
-                    <h4 className="mt-3 fw-bold">{project.title}</h4>
+                    <h4 className="mt-3 fw-bold repo-name">{repo.name}</h4>
                     <h5 className="mt-3 mb-3 description">
-                        {project.description}
+                        {repo.description}
                     </h5>
                     <div
-                        id={project.title}
+                        id={repo.name}
                         className="github-button d-flex justify-content-center"
                         onClick={visitCode}
                     >
                         <img
-                            id={project.title}
+                            id={repo.name}
                             className="github-image"
                             width={20}
                             height={20}
                             src={git}
                             alt="git"
                         />
-                        <h6 id={project.title} className="ms-2 pt-1">
+                        <h6 id={repo.name} className="ms-2 pt-1">
                             {viewCode}
                         </h6>
                     </div>
@@ -89,11 +89,10 @@ export const sumbitEmail = (currentForm, data, handleShow) => {
         .then(
             () => {
                 console.log('SUCCESS!');
+                handleShow();
             },
             (error) => {
                 console.log('FAILED...', error.text);
             }
         );
-
-    handleShow();
 };

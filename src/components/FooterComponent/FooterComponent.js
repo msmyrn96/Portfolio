@@ -35,7 +35,7 @@ const FooterComponent = () => {
                         <Twitter height={40} width={40} />
                     </a>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4 copyright-text">
                     <h5 className="fw-bold">
                         ©2024 Proudly designed and created by Emmanouil
                         Smyrnakis
