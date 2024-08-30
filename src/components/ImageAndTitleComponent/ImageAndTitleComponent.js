@@ -1,5 +1,5 @@
 import { Col, Row, Button } from 'react-bootstrap';
-import Lottie from 'react-lottie';
+import LottieView from 'react-lottie';
 import './styles.scss';
 import { useResponsive } from 'ahooks';
 import { defaultOptions, title } from './constants';
@@ -16,14 +16,17 @@ const ImageAndTitleComponent = ({ scrollIntoView }) => {
                     smallScreens ? 'small-screen-animation' : ''
                 }`}
             >
-                <Lottie
+                <div
                     style={{
-                        width: '70%',
-                        height: '100%',
                         minWidth: extraSmallScreens ? '350px' : '450px'
                     }}
-                    options={defaultOptions}
-                />
+                >
+                    <LottieView
+                        options={defaultOptions}
+                        width={'70%'}
+                        height={'100%'}
+                    />
+                </div>
             </Col>
 
             <Col className="align-self-center title-container">
@@ -41,7 +44,7 @@ const ImageAndTitleComponent = ({ scrollIntoView }) => {
                             const secondaryColor =
                                 index % 2 === 1 ? 'secondary-text' : '';
                             return (
-                                <div className="word-container">
+                                <div key={index} className="word-container">
                                     <div className="h_00 word-wrapper">
                                         <h1
                                             className={`fw-bold ${secondaryColor}`}

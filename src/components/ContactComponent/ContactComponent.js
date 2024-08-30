@@ -209,10 +209,8 @@ const ContactComponent = () => {
                 </Modal.Header>
                 <Modal.Body className="text-center">
                     <Lottie
-                        style={{
-                            width: '30%',
-                            height: '30%'
-                        }}
+                        width={'30%'}
+                        height={'30%'}
                         options={defaultOptions}
                     />
                     <div className="mt-2">Thank you for contacting me!</div>

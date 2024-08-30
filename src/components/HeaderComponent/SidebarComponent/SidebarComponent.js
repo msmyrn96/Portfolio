@@ -39,9 +39,10 @@ const SidebarComponent = ({
                     <CloseIcon height={25} width={25} />
                 </div>
 
-                {options.map((item) => {
+                {options.map((item, index) => {
                     return (
                         <li
+                            key={index}
                             className="ms-4 mb-4"
                             id={item}
                             style={{ listStyle: 'none' }}

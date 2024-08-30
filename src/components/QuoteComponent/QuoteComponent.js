@@ -16,14 +16,13 @@ const QuoteComponent = () => {
                     smallScreens ? 'block-grid' : ''
                 }`}
             >
-                <Lottie
+                <div
                     style={{
-                        width: '70%',
-                        height: '100%',
                         minWidth: extraSmallScreens ? '350px' : '450px'
                     }}
-                    options={defaultOptions}
-                />
+                >
+                    <Lottie options={defaultOptions} />
+                </div>
                 <h1
                     className={`name-title justify-content-center ${
                         extraSmallScreens ? 'extra-margin' : ''

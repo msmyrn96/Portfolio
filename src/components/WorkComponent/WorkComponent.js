@@ -25,9 +25,10 @@ const WorkComponent = () => {
     }, []);
 
     const getProjectsGrid = () => {
-        return repositories.map((repo) => {
+        return repositories.map((repo, index) => {
             return (
                 <div
+                    key={index}
                     style={{ verticalAlign: 'top' }}
                     className="d-inline-block grids ms-5"
                 >

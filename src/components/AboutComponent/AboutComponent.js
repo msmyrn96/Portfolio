@@ -51,9 +51,9 @@ const AboutComponent = () => {
                                         : ''
                                 }`}
                             >
-                                {infoList.map((item) => {
+                                {infoList.map((item, index) => {
                                     return (
-                                        <li className="blink-point">
+                                        <li key={index} className="blink-point">
                                             <h4 className="about-text">
                                                 {item}
                                             </h4>

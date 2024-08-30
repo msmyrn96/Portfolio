@@ -7,8 +7,6 @@ const Carousel = ({ items }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const currentItems = projectsToItems(items);
 
-    console.log(currentItems);
-
     const handleNext = () => {
         setCurrentIndex((prevIndex) =>
             prevIndex + 1 === items.length ? 0 : prevIndex + 1

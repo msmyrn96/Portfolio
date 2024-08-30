@@ -8,8 +8,6 @@ const ExperienceComponent = () => {
     const isSmallScreens = !md;
     const isExtraSmallScreens = !sm;
 
-    console.log(sm, md);
-
     return (
         <Container className="w-100 p-0 m-0" fluid>
             <div
@@ -26,7 +24,10 @@ const ExperienceComponent = () => {
                     const isNotLastItem = index !== works.length - 1;
                     const currentWork = index === 0;
                     return (
-                        <div className="d-flex justify-content-center ">
+                        <div
+                            key={index}
+                            className="d-flex justify-content-center "
+                        >
                             {!isExtraSmallScreens && (
                                 <div
                                     className={`me-5 vertical-line ${

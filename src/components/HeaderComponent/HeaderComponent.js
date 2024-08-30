@@ -62,9 +62,10 @@ const HeaderComponent = (props) => {
             </div>
             <div>
                 <ul className="d-none d-md-flex d-lg-flex justify-content-between">
-                    {list.map((item) => {
+                    {list.map((item, index) => {
                         return (
                             <li
+                                key={index}
                                 id={item}
                                 style={{
                                     listStyle: 'none',
