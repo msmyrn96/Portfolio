@@ -4147,9 +4147,9 @@
   "version" "2.0.0"
 
 "dequal@^2.0.2":
-  "integrity" "sha512-q9K8BlJVxK7hQYqa6XISGmBZbtQQWVXSrRrWreHC94rMt1QL/Impruc+7p2CYSYuVIUr+YCt6hjrs1kkdJRTug=="
-  "resolved" "https://registry.npmjs.org/dequal/-/dequal-2.0.2.tgz"
-  "version" "2.0.2"
+  "integrity" "sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA=="
+  "resolved" "https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz"
+  "version" "2.0.3"
 
 "destroy@1.2.0":
   "integrity" "sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg=="
@@ -7369,6 +7369,11 @@
   "resolved" "https://registry.npmjs.org/minipass/-/minipass-7.1.2.tgz"
   "version" "7.1.2"
 
+"minipass@^5.0.0":
+  "integrity" "sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ=="
+  "resolved" "https://registry.npmjs.org/minipass/-/minipass-5.0.0.tgz"
+  "version" "5.0.0"
+
 "minipass@^7.1.2":
   "integrity" "sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw=="
   "resolved" "https://registry.npmjs.org/minipass/-/minipass-7.1.2.tgz"
@@ -10171,13 +10176,13 @@
   "version" "2.2.1"
 
 "tar@^6.0.2":
-  "integrity" "sha512-kvvfiVvjGMxeUNB6MyYv5z7vhfFRwbwCXJAeL0/lnbrttBVqcMOnpHUf0X42LrPMR8mMpgapkJMchFH4FSHzNA=="
-  "resolved" "https://registry.npmjs.org/tar/-/tar-6.1.10.tgz"
-  "version" "6.1.10"
+  "integrity" "sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A=="
+  "resolved" "https://registry.npmjs.org/tar/-/tar-6.2.1.tgz"
+  "version" "6.2.1"
   dependencies:
     "chownr" "^2.0.0"
     "fs-minipass" "^2.0.0"
-    "minipass" "^3.0.0"
+    "minipass" "^5.0.0"
     "minizlib" "^2.1.1"
     "mkdirp" "^1.0.3"
     "yallist" "^4.0.0"

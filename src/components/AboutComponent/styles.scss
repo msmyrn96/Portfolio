@@ -24,6 +24,13 @@
 
 .about-container {
     margin: 0 auto;
+
+    background: rgb(204, 201, 220);
+    background: linear-gradient(
+        90deg,
+        rgba(204, 201, 220, 1) 10%,
+        rgba(0, 148, 198, 1) 100%
+    );
 }
 
 .info-list {

@@ -3,6 +3,7 @@ import project_image from '../assets/web-programming 1.png';
 import git from '../assets/github 1.png';
 import emailkey from '../emailkey';
 import emailjs, { init } from 'emailjs-com';
+import { useEffect, useState } from 'react';
 
 init('user_py7ZjoQhL02zv6XNCjNN9');
 
@@ -95,4 +96,44 @@ export const sumbitEmail = (currentForm, data, handleShow) => {
                 console.log('FAILED...', error.text);
             }
         );
+};
+
+export const useIntersection = (element, rootMargin) => {
+    const [isVisible, setState] = useState(false);
+
+    useEffect(() => {
+        const current = element?.current;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setState(entry.isIntersecting);
+            },
+            { rootMargin }
+        );
+        current && observer?.observe(current);
+
+        return () => current && observer.unobserve(current);
+    }, [element, rootMargin]);
+
+    return isVisible;
+};
+
+export const TriggerHomeAnimation = (isVisible) => {
+    if (isVisible) {
+        document.querySelectorAll('#animate-item').forEach((item) => {
+            item.classList.add('animate');
+        });
+
+        document.querySelectorAll('#reveal-item').forEach((item) => {
+            item.classList.add('reveal');
+        });
+    } else {
+        document.querySelectorAll('#animate-item').forEach((item) => {
+            item.classList.remove('animate');
+        });
+
+        document.querySelectorAll('#reveal-item').forEach((item) => {
+            item.classList.remove('reveal');
+        });
+    }
 };

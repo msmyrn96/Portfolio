@@ -3,11 +3,20 @@ import LottieView from 'react-lottie';
 import './styles.scss';
 import { useResponsive } from 'ahooks';
 import { defaultOptions, title } from './constants';
+import { useEffect, useRef } from 'react';
+import { TriggerHomeAnimation, useIntersection } from '../../hooks/helpers';
 
 const ImageAndTitleComponent = ({ scrollIntoView }) => {
     const { sm, md } = useResponsive();
     const smallScreens = !md;
     const extraSmallScreens = !sm;
+
+    const triggerRef = useRef(null);
+    const isVisible = useIntersection(triggerRef, '100px');
+
+    useEffect(() => {
+        TriggerHomeAnimation(isVisible);
+    }, [isVisible]);
 
     return (
         <Row className="h-100 d-block d-sm-block d-md-flex">
@@ -44,7 +53,13 @@ const ImageAndTitleComponent = ({ scrollIntoView }) => {
                             const secondaryColor =
                                 index % 2 === 1 ? 'secondary-text' : '';
                             return (
-                                <div key={index} className="word-container">
+                                <div
+                                    id="animate-item"
+                                    key={index}
+                                    className={`word-container animate pop delay-${
+                                        index + 1
+                                    }`}
+                                >
                                     <div className="h_00 word-wrapper">
                                         <h1
                                             className={`fw-bold ${secondaryColor}`}
@@ -57,7 +72,8 @@ const ImageAndTitleComponent = ({ scrollIntoView }) => {
                         })}
                     </div>
                     <div
-                        className={`projects-button-wrapper ${
+                        id="animate-item"
+                        className={`projects-button-wrapper animate ${
                             smallScreens ? 'inline-button' : ''
                         }`}
                     >
@@ -73,32 +89,50 @@ const ImageAndTitleComponent = ({ scrollIntoView }) => {
             </Col>
 
             <h1 className="mt-5 title-container name-title justify-content-center">
-                Hi! I'm
-                <span className="fw-bold secondary-text secondary-font-family animation-text ">
+                <span className="initial-text"> Hi! I'm </span>
+                <span
+                    id="reveal-item"
+                    className="fw-bold secondary-text secondary-font-family animation-text"
+                >
                     Emmanouil
                 </span>{' '}
-                but you can call me
-                <span className="fw-bold secondary-text secondary-font-family animation-text ">
+                <span className="initial-text">but you can call me</span>
+                <span
+                    id="reveal-item"
+                    className="fw-bold secondary-text secondary-font-family animation-text"
+                >
                     Manos
                 </span>
             </h1>
             {!extraSmallScreens ? (
-                <h2 className="title-container justify-content-center">
+                <h2
+                    className="title-container justify-content-center"
+                    ref={triggerRef}
+                >
                     &#123;{' '}
-                    <span className="secondary-text secondary-font-family animation-text ">
+                    <span
+                        id="reveal-item"
+                        className="secondary-text secondary-font-family animation-text reveal"
+                    >
                         Software Engineer
                     </span>{' '}
                     -{' '}
-                    <span className="secondary-text secondary-font-family animation-text ">
+                    <span
+                        id="reveal-item"
+                        className="secondary-text secondary-font-family animation-text reveal"
+                    >
                         Web Developer{' '}
                     </span>{' '}
                     &#125;
                 </h2>
             ) : (
-                <h2 className="title-container roles-block">
+                <h2 className="title-container roles-block" ref={triggerRef}>
                     <span>
                         &#123;
-                        <span className="secondary-text secondary-font-family animation-text ">
+                        <span
+                            id="reveal-item"
+                            className="secondary-text secondary-font-family animation-text reveal"
+                        >
                             {' '}
                             Software Engineer{' '}
                         </span>
@@ -106,7 +140,10 @@ const ImageAndTitleComponent = ({ scrollIntoView }) => {
                     </span>
                     <span>
                         &#123;{' '}
-                        <span className="secondary-text secondary-font-family animation-text ">
+                        <span
+                            id="reveal-item"
+                            className="secondary-text secondary-font-family animation-text reveal"
+                        >
                             {' '}
                             Web Developer{' '}
                         </span>{' '}
