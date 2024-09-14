@@ -44,7 +44,7 @@ const HeaderComponent = (props) => {
                     src={profileImage}
                 />
 
-                <div className="ms-2 d-lg-flex d-md-none d-sm-none d-none header-name ">
+                <div className="ms-2 d-lg-flex d-md-none d-sm-flex d-none header-name ">
                     <h4
                         className="fw-bold mb-0"
                         style={{ lineHeight: '6.25rem' }}
@@ -52,7 +52,7 @@ const HeaderComponent = (props) => {
                         Emmanouil Smyrnakis
                     </h4>
                 </div>
-                <div className="ms-2 d-lg-none d-md-flex d-sm-flex d-flex header-name">
+                <div className="ms-2 d-lg-none d-md-flex d-sm-none d-none header-name">
                     <h4
                         className="fw-bold mb-0"
                         style={{ lineHeight: '6.25rem' }}
