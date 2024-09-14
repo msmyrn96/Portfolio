@@ -8,8 +8,7 @@ import { list } from './constants';
 
 const HeaderComponent = (props) => {
     const [isOpen, setIsOpen] = useState(false);
-    const { lg, md } = useResponsive();
-    const isHeaderFixed = !md && !lg ? 'fixed' : 'relative';
+    const { md } = useResponsive();
 
     const clickSection = (item) => {
         props.onClick(item);
@@ -26,15 +25,13 @@ const HeaderComponent = (props) => {
     return (
         <Container
             style={{
-                backgroundColor: '#0094C6',
                 height: '6.25rem',
-                zIndex: '9999',
-                position: isHeaderFixed
+                zIndex: '9999'
             }}
-            className="d-flex p-0 m-0 justify-content-between w-100 text-white"
+            className="d-flex p-0 m-0 justify-content-between w-100 main-header-container"
             fluid
         >
-            <div className="d-flex h-100 ms-5">
+            <div className="d-flex h-100 ms-5 align-items-center">
                 <img
                     alt="cover"
                     style={{
@@ -42,26 +39,30 @@ const HeaderComponent = (props) => {
                         height: '4rem',
                         objectFit: 'cover',
                         borderRadius: '50%',
-                        position: 'relative',
-                        top: '50%',
-                        transform: 'translateY(-50%)'
+                        position: 'relative'
                     }}
                     src={profileImage}
                 />
 
-                <div className="ms-2 d-lg-block d-md-none d-sm-none d-none">
-                    <h4 className="fw-bold" style={{ lineHeight: '6.25rem' }}>
+                <div className="ms-2 d-lg-flex d-md-none d-sm-none d-none header-name ">
+                    <h4
+                        className="fw-bold mb-0"
+                        style={{ lineHeight: '6.25rem' }}
+                    >
                         Emmanouil Smyrnakis
                     </h4>
                 </div>
-                <div className="ms-2 d-lg-none d-md-block d-sm-block d-block">
-                    <h4 className="fw-bold" style={{ lineHeight: '6.25rem' }}>
+                <div className="ms-2 d-lg-none d-md-flex d-sm-flex d-flex header-name">
+                    <h4
+                        className="fw-bold mb-0"
+                        style={{ lineHeight: '6.25rem' }}
+                    >
                         E.S.
                     </h4>
                 </div>
             </div>
             <div>
-                <ul className="d-none d-md-flex d-lg-flex justify-content-between">
+                <ul className="d-none d-md-flex d-lg-flex justify-content-between me-3 mb-0 mt-0">
                     {list.map((item, index) => {
                         return (
                             <li
@@ -79,7 +80,7 @@ const HeaderComponent = (props) => {
                                 }}
                             >
                                 <h4
-                                    className="list-item"
+                                    className="list-item-header"
                                     name={item}
                                     style={{
                                         cursor: 'pointer',

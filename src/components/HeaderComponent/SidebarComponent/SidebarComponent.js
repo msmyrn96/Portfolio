@@ -1,7 +1,8 @@
 import React from 'react';
 import './styles.scss';
-import menu from '../../../assets/menu 1.png';
 import { ReactComponent as CloseIcon } from '../../../assets/icon-close.svg';
+import { ReactComponent as BurgerMenuIcon } from '../../../assets/burger-menu.svg';
+
 import { useResponsive } from 'ahooks';
 
 const SidebarComponent = ({
@@ -20,14 +21,10 @@ const SidebarComponent = ({
 
     return (
         <div className="d-flex d-md-none d-lg-none d-block h-100 me-5 hamburger-container">
-            <img
-                style={{
-                    position: 'relative',
-                    height: '25px',
-                    cursor: 'pointer'
-                }}
-                src={menu}
-                alt="menu"
+            <BurgerMenuIcon
+                className="burger-menu"
+                height={30}
+                width={30}
                 onClick={toggleSidebar}
             />
             <div
@@ -43,7 +40,7 @@ const SidebarComponent = ({
                     return (
                         <li
                             key={index}
-                            className="ms-4 mb-4"
+                            className="mb-4 list-item-wrapper"
                             id={item}
                             style={{ listStyle: 'none' }}
                             onClick={() => {

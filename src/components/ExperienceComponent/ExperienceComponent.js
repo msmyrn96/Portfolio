@@ -30,7 +30,7 @@ const ExperienceComponent = () => {
                         >
                             {!isExtraSmallScreens && (
                                 <div
-                                    className={`me-5 vertical-line ${
+                                    className={`me-3 vertical-line ${
                                         isExtraSmallScreens
                                             ? 'sm-screen'
                                             : isSmallScreens

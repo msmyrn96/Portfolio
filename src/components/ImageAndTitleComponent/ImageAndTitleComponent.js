@@ -21,7 +21,7 @@ const ImageAndTitleComponent = ({ scrollIntoView }) => {
     return (
         <Row className="h-100 d-block d-sm-block d-md-flex">
             <Col
-                className={`col-7 mt-5 ${
+                className={`col-7 ${
                     smallScreens ? 'small-screen-animation' : ''
                 }`}
             >

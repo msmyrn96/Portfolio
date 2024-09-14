@@ -4,11 +4,12 @@ import { ReactComponent as Facebook } from '../../assets/icons8-facebook.svg';
 import { ReactComponent as LinkedIn } from '../../assets/icons8-linkedin.svg';
 import { ReactComponent as Twitter } from '../../assets/icons8-x.svg';
 import './styles.scss';
+import { copyrights } from './constants';
 
 const FooterComponent = () => {
     return (
         <Container className="w-100 p-0 m-0" fluid>
-            <div className="margin-big text-center footer-container">
+            <div className="text-center footer-container">
                 <div className="d-flex social justify-content-center mb-3">
                     <a
                         href="https://www.facebook.com/manosmyrnakis/"
@@ -36,10 +37,7 @@ const FooterComponent = () => {
                     </a>
                 </div>
                 <div className="mb-4 copyright-text">
-                    <h5 className="fw-bold">
-                        ©2024 Proudly designed and created by Emmanouil
-                        Smyrnakis
-                    </h5>
+                    <h5 className="fw-bold">{copyrights}</h5>
                 </div>
             </div>
         </Container>
