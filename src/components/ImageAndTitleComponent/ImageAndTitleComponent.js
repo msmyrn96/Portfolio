@@ -82,7 +82,7 @@ const ImageAndTitleComponent = ({ scrollIntoView }) => {
                             className="text-white primary-color br10 mt-3 have-a-look"
                             onClick={() => scrollIntoView('Projects')}
                         >
-                            <h4 className="p-2 m-0">Have a look</h4>
+                            <h4 className="p-2 m-0">My projects</h4>
                         </Button>
                     </div>
                 </div>

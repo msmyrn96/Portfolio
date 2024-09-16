@@ -79,7 +79,7 @@ export const projectsToItems = (repositories) => {
     return itemsArray;
 };
 
-export const sumbitEmail = (currentForm, data, handleShow) => {
+export const sumbitEmail = (currentForm, data, handleShow, handleLoader) => {
     emailjs
         .sendForm(
             emailkey.SERVICE_ID,
@@ -93,6 +93,7 @@ export const sumbitEmail = (currentForm, data, handleShow) => {
                 handleShow();
             },
             (error) => {
+                handleLoader();
                 console.log('FAILED...', error.text);
             }
         );

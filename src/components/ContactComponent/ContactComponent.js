@@ -7,6 +7,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { useResponsive } from 'ahooks';
 import { defaultOptions } from './constants';
 import Lottie from 'react-lottie';
+import { ThreeDots } from 'react-loader-spinner';
 
 const ContactComponent = () => {
     const [show, setShow] = useState(false);
@@ -20,14 +21,43 @@ const ContactComponent = () => {
     const isSmallScreens = !md;
     const isExtraSmallScreens = !sm;
     const formRef = useRef();
+    const [isLoading, setLoading] = useState(false);
+
+    const handleLoader = () => {
+        setLoading(!isLoading);
+    };
 
     const handleReset = () => {
+        handleLoader();
         document.getElementById('form').reset();
         setName('');
         setSubject('');
         setEmail('');
         setMessage('');
         handleClose();
+    };
+
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+        event.preventDefault();
+
+        if (form.checkValidity() === false) {
+            event.stopPropagation();
+            return;
+        }
+
+        handleLoader();
+        sumbitEmail(
+            formRef,
+            {
+                email: email,
+                name: name,
+                subject: subject,
+                message: message
+            },
+            handleShow,
+            handleLoader
+        );
     };
 
     const handleChange = (e) => {
@@ -52,6 +82,19 @@ const ContactComponent = () => {
     return (
         <Container className="w-100 p-0 m-0 big-container" fluid>
             <div className="margin-big fw-bold secondary-color pt-5 pb-5 contact-container">
+                {isLoading && (
+                    <div className="loader-wrapper">
+                        <ThreeDots
+                            className="loader-image"
+                            visible={isLoading}
+                            height="80"
+                            width="80"
+                            radius="9"
+                            ariaLabel="three-dots-loading"
+                            wrapperClass="loader"
+                        />
+                    </div>
+                )}
                 <h1 className="fw-bold text-white text-center">Contact</h1>
                 <div
                     className={`mt-5 animation-form-wrapper ${
@@ -75,6 +118,7 @@ const ContactComponent = () => {
                             className="form-container"
                             id="form"
                             ref={formRef}
+                            onSubmit={handleSubmit}
                         >
                             <Form.Group
                                 className="mb-3"
@@ -82,6 +126,7 @@ const ContactComponent = () => {
                             >
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control
+                                    required
                                     name="from_name"
                                     className="inputContact"
                                     type="name"
@@ -91,12 +136,13 @@ const ContactComponent = () => {
                             </Form.Group>
                             <Form.Group
                                 className="mb-3"
-                                controlId="exampleForm.ControlInput1"
+                                controlId="exampleForm.ControlInput2"
                             >
                                 <Form.Label>Email</Form.Label>
                                 <Form.Control
+                                    required
                                     className="inputContact"
-                                    type="name"
+                                    type="email"
                                     placeholder="Enter your email"
                                     name="email_from"
                                     onChange={handleChange}
@@ -104,7 +150,7 @@ const ContactComponent = () => {
                             </Form.Group>
                             <Form.Group
                                 className="mb-3"
-                                controlId="exampleForm.ControlInput1"
+                                controlId="exampleForm.ControlInput3"
                             >
                                 <Form.Label>Subject</Form.Label>
                                 <Form.Control
@@ -117,10 +163,11 @@ const ContactComponent = () => {
                             </Form.Group>
                             <Form.Group
                                 className="mb-3"
-                                controlId="exampleForm.ControlInput1"
+                                controlId="exampleForm.ControlInput4"
                             >
                                 <Form.Label>Message</Form.Label>
                                 <Form.Control
+                                    required
                                     onChange={handleChange}
                                     className="inputContact"
                                     as="textarea"
@@ -129,25 +176,19 @@ const ContactComponent = () => {
                                     name="message"
                                 />
                             </Form.Group>
+                            <Form.Group
+                                className="button-wrapper"
+                                controlId="exampleForm.ControlInput5"
+                            >
+                                <Button
+                                    style={{ cursor: 'pointer' }}
+                                    className="circleButton"
+                                    type="submit"
+                                >
+                                    <img src={send} alt="send" />
+                                </Button>
+                            </Form.Group>
                         </Form>
-                        <div
-                            style={{ cursor: 'pointer' }}
-                            className="circleButton"
-                            onClick={() =>
-                                sumbitEmail(
-                                    formRef,
-                                    {
-                                        email: email,
-                                        name: name,
-                                        subject: subject,
-                                        message: message
-                                    },
-                                    handleShow
-                                )
-                            }
-                        >
-                            <img src={send} alt="send" />
-                        </div>
                     </div>
 
                     <div
