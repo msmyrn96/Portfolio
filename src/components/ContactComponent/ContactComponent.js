@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container, Form, Modal, Button } from 'react-bootstrap';
 import send from '../../assets/Group.png';
 import { useRef, useState } from 'react';
@@ -6,8 +7,8 @@ import { sumbitEmail } from '../../hooks/helpers';
 import { TypeAnimation } from 'react-type-animation';
 import { useResponsive } from 'ahooks';
 import { defaultOptions } from './constants';
-import Lottie from 'react-lottie';
 import { ThreeDots } from 'react-loader-spinner';
+import { useLottie } from 'lottie-react';
 
 const ContactComponent = () => {
     const [show, setShow] = useState(false);
@@ -22,6 +23,7 @@ const ContactComponent = () => {
     const isExtraSmallScreens = !sm;
     const formRef = useRef();
     const [isLoading, setLoading] = useState(false);
+    const { View } = useLottie(defaultOptions);
 
     const handleLoader = () => {
         setLoading(!isLoading);
@@ -101,8 +103,8 @@ const ContactComponent = () => {
                         isExtraSmallScreens
                             ? 'extra-small-screens'
                             : isSmallScreens
-                            ? 'small-screens'
-                            : ''
+                              ? 'small-screens'
+                              : ''
                     }`}
                 >
                     <div
@@ -110,8 +112,8 @@ const ContactComponent = () => {
                             isExtraSmallScreens
                                 ? 'extra-small-screens'
                                 : isSmallScreens
-                                ? 'small-screens'
-                                : ''
+                                  ? 'small-screens'
+                                  : ''
                         }`}
                     >
                         <Form
@@ -196,8 +198,8 @@ const ContactComponent = () => {
                             isExtraSmallScreens
                                 ? 'extra-small-screens'
                                 : isSmallScreens
-                                ? 'small-screens'
-                                : ''
+                                  ? 'small-screens'
+                                  : ''
                         }`}
                     >
                         <div
@@ -205,8 +207,8 @@ const ContactComponent = () => {
                                 isExtraSmallScreens
                                     ? 'extra-small-screens'
                                     : isSmallScreens
-                                    ? 'small-screens'
-                                    : ''
+                                      ? 'small-screens'
+                                      : ''
                             }`}
                         >
                             <h1
@@ -214,8 +216,8 @@ const ContactComponent = () => {
                                     isExtraSmallScreens
                                         ? 'extra-small-screens'
                                         : isSmallScreens
-                                        ? 'small-screens'
-                                        : ''
+                                          ? 'small-screens'
+                                          : ''
                                 }`}
                             >
                                 Let's have{' '}
@@ -249,11 +251,7 @@ const ContactComponent = () => {
                     <Modal.Title>Email was sent!</Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="text-center">
-                    <Lottie
-                        width={'30%'}
-                        height={'30%'}
-                        options={defaultOptions}
-                    />
+                    <div className="animation-wrapper"> {View}</div>
                     <div className="mt-2">Thank you for contacting me!</div>
                     You will receive a reply shortly!
                 </Modal.Body>

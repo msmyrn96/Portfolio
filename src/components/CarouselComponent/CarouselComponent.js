@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { projectsToItems } from '../../hooks/helpers';
 import { ReactComponent as RightArrow } from '../../assets/right-arrow-svgrepo-com.svg';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import { ReactComponent as Instagram } from '../../assets/icons8-instagram.svg';
 import { ReactComponent as Facebook } from '../../assets/icons8-facebook.svg';

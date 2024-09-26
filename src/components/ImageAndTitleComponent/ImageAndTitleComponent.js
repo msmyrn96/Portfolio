@@ -1,13 +1,17 @@
+import React from 'react';
 import { Col, Row, Button } from 'react-bootstrap';
-import LottieView from 'react-lottie';
 import './styles.scss';
 import { useResponsive } from 'ahooks';
 import { defaultOptions, title } from './constants';
 import { useEffect, useRef } from 'react';
 import { TriggerHomeAnimation, useIntersection } from '../../hooks/helpers';
+import { useLottie } from 'lottie-react';
 
 const ImageAndTitleComponent = ({ scrollIntoView }) => {
     const { sm, md } = useResponsive();
+    const { View } = useLottie(defaultOptions);
+
+    console.log(View);
     const smallScreens = !md;
     const extraSmallScreens = !sm;
 
@@ -30,11 +34,7 @@ const ImageAndTitleComponent = ({ scrollIntoView }) => {
                         minWidth: extraSmallScreens ? '350px' : '450px'
                     }}
                 >
-                    <LottieView
-                        options={defaultOptions}
-                        width={'70%'}
-                        height={'100%'}
-                    />
+                    <div className="animation-wrapper">{View}</div>
                 </div>
             </Col>
 
@@ -45,8 +45,8 @@ const ImageAndTitleComponent = ({ scrollIntoView }) => {
                             extraSmallScreens
                                 ? 'block-words'
                                 : smallScreens
-                                ? 'inline-words'
-                                : ''
+                                  ? 'inline-words'
+                                  : ''
                         }`}
                     >
                         {title.map((word, index) => {

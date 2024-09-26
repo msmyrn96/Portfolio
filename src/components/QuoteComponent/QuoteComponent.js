@@ -1,13 +1,15 @@
+import React from 'react';
 import { Container } from 'react-bootstrap';
-import Lottie from 'react-lottie';
 import { useResponsive } from 'ahooks';
 import './styles.scss';
 import { defaultOptions } from './constants';
+import { useLottie } from 'lottie-react';
 
 const QuoteComponent = () => {
     const { sm, md } = useResponsive();
     const smallScreens = !md;
     const extraSmallScreens = !sm;
+    const { View } = useLottie(defaultOptions);
 
     return (
         <Container className="w-100 p-0 m-0" fluid>
@@ -21,7 +23,7 @@ const QuoteComponent = () => {
                         minWidth: extraSmallScreens ? '350px' : '450px'
                     }}
                 >
-                    <Lottie options={defaultOptions} />
+                    <div className="animation-wrapper"> {View} </div>
                 </div>
                 <h1
                     className={`name-title justify-content-center ${

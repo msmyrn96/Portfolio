@@ -1,5 +1,6 @@
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import secondaryImage from '../../assets/pic3.jpg';
+import secondaryImage from '../../assets/about_image.png';
 import { useResponsive } from 'ahooks';
 import './styles.scss';
 import { text } from './constants';

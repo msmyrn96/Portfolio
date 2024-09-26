@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import { works } from './constants';
 import './styles.scss';
@@ -15,8 +16,8 @@ const ExperienceComponent = () => {
                     isExtraSmallScreens
                         ? 'sm-screen'
                         : isSmallScreens
-                        ? 'md-screen'
-                        : ''
+                          ? 'md-screen'
+                          : ''
                 }`}
             >
                 <h1 className="fw-bold text-center mb-5 title">Experience</h1>
@@ -30,12 +31,12 @@ const ExperienceComponent = () => {
                         >
                             {!isExtraSmallScreens && (
                                 <div
-                                    className={`me-3 vertical-line ${
+                                    className={`me-4 vertical-line ${
                                         isExtraSmallScreens
                                             ? 'sm-screen'
                                             : isSmallScreens
-                                            ? 'md-screen'
-                                            : ''
+                                              ? 'md-screen'
+                                              : ''
                                     }`}
                                 >
                                     <div
@@ -53,8 +54,8 @@ const ExperienceComponent = () => {
                                             isExtraSmallScreens
                                                 ? 'sm-screen'
                                                 : isSmallScreens
-                                                ? 'md-screen'
-                                                : ''
+                                                  ? 'md-screen'
+                                                  : ''
                                         }  `}
                                     ></div>
                                 </div>
@@ -68,8 +69,8 @@ const ExperienceComponent = () => {
                                     isExtraSmallScreens
                                         ? 'sm-screen'
                                         : isSmallScreens
-                                        ? 'md-screen'
-                                        : ''
+                                          ? 'md-screen'
+                                          : ''
                                 } shadowbox`}
                             >
                                 <div className="text-container">

@@ -1,3 +1,4 @@
+import React from 'react';
 import { myRepo, viewCode } from '../components/WorkComponent/constants';
 import project_image from '../assets/web-programming 1.png';
 import git from '../assets/github 1.png';
@@ -40,6 +41,7 @@ export const projectsToItems = (repositories) => {
     const itemsArray = repositories.map((repo) => {
         return (
             <div
+                key={repo.id}
                 style={{ verticalAlign: 'top' }}
                 className="d-inline-block grids ms-5"
             >

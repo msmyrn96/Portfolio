@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import HeaderComponent from '../components/HeaderComponent/HeaderComponent';
 import ImageAndTitleComponent from '../components/ImageAndTitleComponent/ImageAndTitleComponent';

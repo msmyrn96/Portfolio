@@ -160,6 +160,17 @@
 .modal-container {
     padding-right: 0%;
 
+    .animation-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        div:nth-of-type(1) {
+            width: 30%;
+            height: 30%;
+        }
+    }
+
     .modal-dialog {
         top: 30%;
 

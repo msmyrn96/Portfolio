@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import profileImage from '../../assets/profile.jpg';
 import { useEffect, useState } from 'react';

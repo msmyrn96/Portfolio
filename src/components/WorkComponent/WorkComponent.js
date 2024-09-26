@@ -1,3 +1,4 @@
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import project_image from '../../assets/web-programming 1.png';
 import git from '../../assets/github 1.png';
