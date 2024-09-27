@@ -6,6 +6,7 @@ COPY package.json ./
 RUN npm install
 COPY . ./
 RUN npm run build
+RUN rm -fr node_modules
 
 # Production Stage
 FROM nginx:latest
