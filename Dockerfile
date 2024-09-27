@@ -1,7 +1,11 @@
 # build step
-FROM node:16.13.2-alpine as build
+FROM node:16.20.0 as build
 WORKDIR /app
 COPY package.json ./
+
+RUN apk add --update python make g++\
+   && rm -rf /var/cache/apk/*
+
 RUN npm install
 COPY . ./
 RUN npm run build
