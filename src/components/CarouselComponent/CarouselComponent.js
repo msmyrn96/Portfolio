@@ -24,7 +24,11 @@ const Carousel = ({ items }) => {
         <div className="carousel">
             <div className="slide-container">
                 <div className="slide-direction">
-                    <div className="left" onClick={handlePrevious}>
+                    <div
+                        className="left"
+                        onClick={handlePrevious}
+                        data-testid="left-button"
+                    >
                         {/* left arrow */}
                         <RightArrow
                             className="left-arrow"
@@ -32,7 +36,11 @@ const Carousel = ({ items }) => {
                             width={30}
                         />
                     </div>
-                    <div className="right" onClick={handleNext}>
+                    <div
+                        data-testid="right-button"
+                        className="right"
+                        onClick={handleNext}
+                    >
                         {/* right arrow */}
                         <RightArrow
                             className="right-arrow"

@@ -134,6 +134,7 @@ const ContactComponent = () => {
                                     type="name"
                                     placeholder="Enter your name"
                                     onChange={handleChange}
+                                    data-testid="name-input"
                                 />
                             </Form.Group>
                             <Form.Group
@@ -147,6 +148,7 @@ const ContactComponent = () => {
                                     type="email"
                                     placeholder="Enter your email"
                                     name="email_from"
+                                    data-testid="email-input"
                                     onChange={handleChange}
                                 />
                             </Form.Group>
@@ -186,6 +188,7 @@ const ContactComponent = () => {
                                     style={{ cursor: 'pointer' }}
                                     className="circleButton"
                                     type="submit"
+                                    data-testid="submit-button"
                                 >
                                     <img src={send} alt="send" />
                                 </Button>

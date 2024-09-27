@@ -51,6 +51,7 @@ const AboutComponent = () => {
                                         ? 'less-padding gap-enabled'
                                         : ''
                                 }`}
+                                data-testid="about-list"
                             >
                                 {infoList.map((item, index) => {
                                     return (

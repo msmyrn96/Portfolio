@@ -63,7 +63,10 @@ const HeaderComponent = (props) => {
                 </div>
             </div>
             <div>
-                <ul className="d-none d-md-flex d-lg-flex justify-content-between me-3 mb-0 mt-0">
+                <ul
+                    className="d-none d-md-flex d-lg-flex justify-content-between me-3 mb-0 mt-0"
+                    data-testid="header-list"
+                >
                     {list.map((item, index) => {
                         return (
                             <li

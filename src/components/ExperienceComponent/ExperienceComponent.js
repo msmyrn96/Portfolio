@@ -21,89 +21,91 @@ const ExperienceComponent = () => {
                 }`}
             >
                 <h1 className="fw-bold text-center mb-5 title">Experience</h1>
-                {works.map((work, index) => {
-                    const isNotLastItem = index !== works.length - 1;
-                    const currentWork = index === 0;
-                    return (
-                        <div
-                            key={index}
-                            className="d-flex justify-content-center "
-                        >
-                            {!isExtraSmallScreens && (
-                                <div
-                                    className={`me-4 vertical-line ${
-                                        isExtraSmallScreens
-                                            ? 'sm-screen'
-                                            : isSmallScreens
-                                              ? 'md-screen'
-                                              : ''
-                                    }`}
-                                >
+                <ul data-testid="experience-list">
+                    {works.map((work, index) => {
+                        const isNotLastItem = index !== works.length - 1;
+                        const currentWork = index === 0;
+                        return (
+                            <li
+                                key={index}
+                                className="d-flex justify-content-center "
+                            >
+                                {!isExtraSmallScreens && (
                                     <div
-                                        className={
-                                            currentWork
-                                                ? 'circle active'
-                                                : 'circle'
-                                        }
-                                    ></div>
-
-                                    <div
-                                        className={`vertical ${
-                                            isNotLastItem ? '' : 'last'
-                                        } ${
+                                        className={`me-4 vertical-line ${
                                             isExtraSmallScreens
                                                 ? 'sm-screen'
                                                 : isSmallScreens
                                                   ? 'md-screen'
                                                   : ''
-                                        }  `}
-                                    ></div>
+                                        }`}
+                                    >
+                                        <div
+                                            className={
+                                                currentWork
+                                                    ? 'circle active'
+                                                    : 'circle'
+                                            }
+                                        ></div>
+
+                                        <div
+                                            className={`vertical ${
+                                                isNotLastItem ? '' : 'last'
+                                            } ${
+                                                isExtraSmallScreens
+                                                    ? 'sm-screen'
+                                                    : isSmallScreens
+                                                      ? 'md-screen'
+                                                      : ''
+                                            }  `}
+                                        ></div>
+                                    </div>
+                                )}
+                                <div
+                                    className={`workGrid primary-color br10 bigGrid ${
+                                        currentWork && isExtraSmallScreens
+                                            ? 'current-work'
+                                            : ''
+                                    } ${
+                                        isExtraSmallScreens
+                                            ? 'sm-screen'
+                                            : isSmallScreens
+                                              ? 'md-screen'
+                                              : ''
+                                    } shadowbox`}
+                                >
+                                    <div className="text-container">
+                                        <div className="text-white m-3 p-3 mb-0 pb-2">
+                                            <h2 className="fw-bold">
+                                                {work.title}
+                                            </h2>
+                                        </div>
+                                        <div className="ms-3 ps-3 pb-2">
+                                            <h4
+                                                style={{
+                                                    color: '#CCC9DC',
+                                                    fontWeight: 'bold'
+                                                }}
+                                            >
+                                                {work.company}
+                                            </h4>
+                                        </div>
+                                        <div className=" text-white ms-3 ps-3 pb-2">
+                                            <h5 style={{ opacity: '80%' }}>
+                                                {work.locationDate}
+                                            </h5>
+                                        </div>
+                                        <div className=" text-white ms-3 ps-3 pb-2">
+                                            <h5 style={{ opacity: '80%' }}>
+                                                {work.Team}
+                                            </h5>
+                                        </div>
+                                    </div>
                                 </div>
-                            )}
-                            <div
-                                className={`workGrid primary-color br10 bigGrid ${
-                                    currentWork && isExtraSmallScreens
-                                        ? 'current-work'
-                                        : ''
-                                } ${
-                                    isExtraSmallScreens
-                                        ? 'sm-screen'
-                                        : isSmallScreens
-                                          ? 'md-screen'
-                                          : ''
-                                } shadowbox`}
-                            >
-                                <div className="text-container">
-                                    <div className="text-white m-3 p-3 mb-0 pb-2">
-                                        <h2 className="fw-bold">
-                                            {work.title}
-                                        </h2>
-                                    </div>
-                                    <div className="ms-3 ps-3 pb-2">
-                                        <h4
-                                            style={{
-                                                color: '#CCC9DC',
-                                                fontWeight: 'bold'
-                                            }}
-                                        >
-                                            {work.company}
-                                        </h4>
-                                    </div>
-                                    <div className=" text-white ms-3 ps-3 pb-2">
-                                        <h5 style={{ opacity: '80%' }}>
-                                            {work.locationDate}
-                                        </h5>
-                                    </div>
-                                    <div className=" text-white ms-3 ps-3 pb-2">
-                                        <h5 style={{ opacity: '80%' }}>
-                                            {work.Team}
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    );
-                })}
+                            </li>
+                        );
+                    })}
+                </ul>
             </div>
         </Container>
     );
