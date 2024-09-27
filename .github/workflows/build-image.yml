@@ -44,7 +44,7 @@ jobs:
                       type=ref,event=branch
                       type=semver,pattern={{version}}
 
-            - name: Docker build amd
+            - name: Docker build
               uses: docker/build-push-action@v6
               with:
                   push: ${{ github.event_name != 'pull_request' }}
@@ -52,17 +52,9 @@ jobs:
                   labels: ${{ steps.docker_meta.outputs.labels }}
                   cache-from: type=gha
                   cache-to: type=gha,mode=max
-                  platforms: linux/amd64
-
-            - name: Docker build arm
-              uses: docker/build-push-action@v6
-              with:
-                  push: ${{ github.event_name != 'pull_request' }}
-                  tags: ${{ steps.docker_meta.outputs.tags }}
-                  labels: ${{ steps.docker_meta.outputs.labels }}
-                  cache-from: type=gha
-                  cache-to: type=gha,mode=max
-                  platforms: linux/arm64
+                  platforms: linux/amd64,linux/arm64
+                  build-args: |
+                      NODE_ENV=production # Set NODE_ENV for faster installs
 
             # If PR, put image tags in the PR comments
             # from https://github.com/marketplace/actions/create-or-update-comment
