@@ -1,12 +1,9 @@
 # build step
-FROM node:18.20.4 AS build
+FROM node:18.20.4-alpine3.20 AS build
 WORKDIR /app
 COPY package.json ./
 
-RUN apt-get update && \
-    apt-get install -y python3 make g++ && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+RUN apk add g++ make py3-pip
 
 RUN npm install
 COPY . ./
