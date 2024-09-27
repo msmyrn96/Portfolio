@@ -1,13 +1,10 @@
 # build step
-FROM node:18.20.4-alpine3.20 AS build
+FROM node:18.20.4 AS build
 WORKDIR /app
 COPY package.json ./
 
 # Install python/pip
-ENV PYTHONUNBUFFERED=1
-RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
-RUN python3 -m ensurepip
-RUN pip3 install --no-cache --upgrade pip setuptools
+RUN apt-get install python3 -y
 
 RUN npm install
 COPY . ./
