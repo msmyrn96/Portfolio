@@ -3,7 +3,11 @@ FROM node:18.20.4-alpine3.20 AS build
 WORKDIR /app
 COPY package.json ./
 
-RUN apk add g++ make py3-pip
+# Install python/pip
+ENV PYTHONUNBUFFERED=1
+RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
+RUN python3 -m ensurepip
+RUN pip3 install --no-cache --upgrade pip setuptools
 
 RUN npm install
 COPY . ./
