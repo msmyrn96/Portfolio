@@ -5,7 +5,7 @@ name: Basic Docker Build
 on:
     push:
         branches:
-            - main
+            - master
     pull_request:
 
 jobs:
@@ -14,7 +14,6 @@ jobs:
         runs-on: ubuntu-latest
         permissions:
             pull-requests: write # needed to create and update comments in PRs
-            contents: read # for actions/checkout to fetch code
         steps:
             - name: Checkout git repo
               uses: actions/checkout@v4
