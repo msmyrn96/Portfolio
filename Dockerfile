@@ -3,9 +3,6 @@ FROM node:16.20.2 AS build
 WORKDIR /app
 COPY package.json ./
 
-# Install python/pip
-# RUN apt-get install python3 -y
-
 RUN npm install
 COPY . ./
 RUN npm run build
