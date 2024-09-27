@@ -2,7 +2,7 @@
     "name": "my_portfolio",
     "version": "0.1.0",
     "private": false,
-    "homepage": "https://smyrn96.github.io/Portfolio",
+    "homepage": "/",
     "dependencies": {
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.2.7",
