@@ -44,6 +44,14 @@ jobs:
                       type=ref,event=branch
                       type=semver,pattern={{version}}
 
+            - name: Cache node modules
+              uses: actions/cache@v3
+              with:
+                  path: ~/.npm
+                  key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+                  restore-keys: |
+                      ${{ runner.os }}-npm-
+
             - name: Docker build
               uses: docker/build-push-action@v6
               with:
