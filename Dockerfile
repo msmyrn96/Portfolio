@@ -1,10 +1,10 @@
 # build step
-FROM node:18.20.4 AS build
+FROM node:16.20.2 AS build
 WORKDIR /app
 COPY package.json ./
 
 # Install python/pip
-RUN apt-get install python3 -y
+# RUN apt-get install python3 -y
 
 RUN npm install
 COPY . ./
