@@ -9,6 +9,7 @@ This project is a personal portfolio website designed and developed by me to sho
 - **About Me:** A section that provides insight into my background, skills, and interests.
 - **Contact Information:** Easy ways to get in touch with me, including links to my LinkedIn, GitHub, and other social media profiles.
 - **Modern UI/UX:** Clean and modern design to ensure a user-friendly experience.
+- **Pre-built Docker Image**: The portfolio is available as a pre-built Docker image, allowing for quick and consistent deployment in any environment that supports Docker. This image includes all necessary dependencies, optimized for performance, and ready to run out of the box.
   
 ## Technologies Used
 - **HTML5 & CSS3:** For structuring and styling the content of the website.
@@ -16,8 +17,11 @@ This project is a personal portfolio website designed and developed by me to sho
 - **React.js:** To build a dynamic and responsive user interface.
 - **Bootstrap:** For responsive grid layouts and components.
 - **SCSS:** For managing styles and making the design more modular and maintainable.
+- **Docker:** To containerize the portfolio, encapsulating the application and all its dependencies in a portable image.
 
 ## Installation & Setup
+
+### Local Development
 - Clone the repository:
 `git clone https://github.com/smyrn96/Portfolio.git`
 
@@ -29,7 +33,13 @@ This project is a personal portfolio website designed and developed by me to sho
   
 - Open your browser and navigate to http://localhost:3000 to view the portfolio locally.
 
-## Docker installation 
+### Docker installation 
+- Pull the image from Docker Hub registry:
+`docker pull --platform linux/x86_64 smyrninio/portfolio-image`
+
+- Run the latest docker image in port 80: `docker container run --rm -p 80:80 smyrninio/portfolio-image:latest`
+  
+- Open your browser and navigate to http://localhost:80 to view the portfolio locally.
 
 
 ## Deployment
