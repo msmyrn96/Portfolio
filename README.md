@@ -10,6 +10,7 @@ This project is a personal portfolio website designed and developed by me to sho
 - **Contact Information:** Easy ways to get in touch with me, including links to my LinkedIn, GitHub, and other social media profiles.
 - **Modern UI/UX:** Clean and modern design to ensure a user-friendly experience.
 - **Pre-built Docker Image**: The portfolio is available as a pre-built Docker image, allowing for quick and consistent deployment in any environment that supports Docker. This image includes all necessary dependencies, optimized for performance, and ready to run out of the box.
+- **CI/CD Pipeline Overview:** The project utilizes  workflows that automate various tasks in the development cycle. 
   
 ## Technologies Used
 - **HTML5 & CSS3:** For structuring and styling the content of the website.
@@ -18,6 +19,7 @@ This project is a personal portfolio website designed and developed by me to sho
 - **Bootstrap:** For responsive grid layouts and components.
 - **SCSS:** For managing styles and making the design more modular and maintainable.
 - **Docker:** To containerize the portfolio, encapsulating the application and all its dependencies in a portable image.
+- **Github Workflows:** Workflows are triggered by events such as pushes to the master branch or pull requests, ensuring that every change is automatically validated and deployed.
 
 ## Installation & Setup
 
