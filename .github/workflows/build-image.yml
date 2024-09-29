@@ -62,7 +62,7 @@ jobs:
                   password: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Unit Testing in Docker
-              run: docker run --rm ghcr.io/smyrn96/portfolio-image:"$GITHUB_RUN_ID" npm validate
+              run: docker run --rm ghcr.io/smyrn96/portfolio-image:"$GITHUB_RUN_ID" npm run validate
 
     # NEXT JOB #######################################################################
     scan-image:
