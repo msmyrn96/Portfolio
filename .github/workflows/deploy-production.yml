@@ -26,7 +26,7 @@ jobs:
             - name: Update homepage in package.json
               run: |
                   # Use jq to replace the homepage property
-                  jq '.homepage = "https://smyrn96.github.io/Portfolio"' package.json > temp.json && mv temp.json package.json
+                  jq '.homepage = "https://${{ github.actor }}.github.io/Portfolio"' package.json > temp.json && mv temp.json package.json
 
             - name: Cache node modules
               uses: actions/cache@v3
