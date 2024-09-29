@@ -19,15 +19,18 @@ This project is a personal portfolio website designed and developed by me to sho
 
 ## Installation & Setup
 - Clone the repository:
-`git clone https://github.com/your-username/your-portfolio-repo.git`
+`git clone [https://github.com/your-username/your-portfolio-repo.git](https://github.com/smyrn96/Portfolio.git)`
 
-- Navigate to the project directory: `cd your-portfolio-repo`
+- Navigate to the project directory: `cd Portfolio`
   
 - Install dependencies: `npm install`
 
 - Run the development server: `npm start`
   
 - Open your browser and navigate to http://localhost:3000 to view the portfolio locally.
+
+## Docker installation 
+
 
 ## Deployment
 The portfolio is deployed on GitHub Pages. You can view the live version at: https://smyrn96.github.io/Portfolio/
