@@ -3,7 +3,7 @@ name: Deploy Portfolio app
 
 on:
     workflow_run:
-        workflows: [Basic Docker Build]
+        workflows: ['Basic Docker Build']
         types:
             - completed
 
