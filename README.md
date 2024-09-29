@@ -19,7 +19,7 @@ This project is a personal portfolio website designed and developed by me to sho
 
 ## Installation & Setup
 - Clone the repository:
-`git clone [https://github.com/your-username/your-portfolio-repo.git](https://github.com/smyrn96/Portfolio.git)`
+`git clone https://github.com/smyrn96/Portfolio.git`
 
 - Navigate to the project directory: `cd Portfolio`
   
