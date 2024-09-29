@@ -38,7 +38,7 @@ jobs:
               uses: docker/build-push-action@v6
               with:
                   push: true
-                  tags: ghcr.io/smyrn96/portfolio-image:${{ github.run_id }}
+                  tags: ghcr.io/${{ github.actor }}/portfolio-image:${{ github.run_id }}
                   target: test
                   cache-from: type=gha
                   cache-to: type=gha,mode=max
@@ -62,7 +62,7 @@ jobs:
                   password: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Unit Testing in Docker
-              run: docker run --rm ghcr.io/smyrn96/portfolio-image:"$GITHUB_RUN_ID" npm run validate
+              run: docker run --rm ghcr.io/${{ github.actor }}/portfolio-image:"$GITHUB_RUN_ID" npm run validate
 
     # NEXT JOB #######################################################################
     scan-image:
@@ -93,12 +93,12 @@ jobs:
                   password: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Pull image to scan
-              run: docker pull ghcr.io/smyrninio/portfolio-image:"$GITHUB_RUN_ID"
+              run: docker pull ghcr.io/${{ github.actor }}/portfolio-image:"$GITHUB_RUN_ID"
 
             - name: Run Trivy for all CVEs (non-blocking)
               uses: aquasecurity/trivy-action@master
               with:
-                  image-ref: ghcr.io/smyrninio/portfolio-image:${{ github.run_id }}
+                  image-ref: ghcr.io/${{ github.actor }}/portfolio-image:${{ github.run_id }}
                   format: table
                   exit-code: 0
 
@@ -144,7 +144,7 @@ jobs:
               id: docker_meta
               uses: docker/metadata-action@v5
               with:
-                  images: smyrninio/portfolio-image,ghcr.io/smyrn96/portfolio-image
+                  images: smyrninio/portfolio-image,ghcr.io/${{ github.actor }}/portfolio-image
                   flavor: |
                       latest=false
                   tags: |
