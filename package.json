@@ -35,7 +35,7 @@
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
         "build": "react-scripts build",
-        "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!axios)/'",
+        "test": "react-scripts test --watchAll=false --transformIgnorePatterns 'node_modules/(?!axios)/'",
         "eject": "react-scripts eject",
         "lint": "eslint  --fix src/**/*.js",
         "format": "prettier src/**/*.js --write",

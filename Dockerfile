@@ -4,10 +4,13 @@ WORKDIR /app
 COPY package.json ./
 
 RUN npm install
-
 COPY . ./
-
 RUN npm run build
+
+# Test stage
+FROM build AS test
+WORKDIR /app
+RUN npm run test  # This is the test stage
 
 # Production Stage
 FROM nginx:latest
