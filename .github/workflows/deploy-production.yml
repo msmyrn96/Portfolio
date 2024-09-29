@@ -25,8 +25,8 @@ jobs:
             # Change homepage property in package.json
             - name: Update homepage in package.json
               run: |
-                  # Use sed to replace the homepage property
-                  sed -i 's|"homepage": ".*"|"homepage": "https://smyrn96.github.io/Portfolio"|' package.json
+                  # Use jq to replace the homepage property
+                  jq '.homepage = "https://smyrn96.github.io/Portfolio"' package.json > temp.json && mv temp.json package.json
 
             - name: Cache node modules
               uses: actions/cache@v3
