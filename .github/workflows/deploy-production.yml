@@ -9,9 +9,9 @@ on:
 
 jobs:
     deploy-react-to-gh-pages:
+        if: github.event_name != 'pull_request'
         name: Deploy React app to gh pages
         runs-on: ubuntu-latest
-
         steps:
             - name: Checkout git repo
               uses: actions/checkout@v4
