@@ -5,6 +5,16 @@
         color: $primary-color;
     }
 
+    .experience-list {
+        margin-right: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        &.has-gap {
+            gap: 0.5rem;
+        }
+    }
+
     .bigGrid {
         transition: transform 0.2s;
         z-index: 0;

@@ -21,7 +21,10 @@ const ExperienceComponent = () => {
                 }`}
             >
                 <h1 className="fw-bold text-center mb-5 title">Experience</h1>
-                <ul data-testid="experience-list">
+                <ul
+                    data-testid="experience-list"
+                    className={`experience-list ${isExtraSmallScreens ? 'has-gap' : ''}`}
+                >
                     {works.map((work, index) => {
                         const isNotLastItem = index !== works.length - 1;
                         const currentWork = index === 0;
@@ -95,11 +98,13 @@ const ExperienceComponent = () => {
                                                 {work.locationDate}
                                             </h5>
                                         </div>
-                                        <div className=" text-white ms-3 ps-3 pb-2">
-                                            <h5 style={{ opacity: '80%' }}>
-                                                {work.Team}
-                                            </h5>
-                                        </div>
+                                        {!isExtraSmallScreens && (
+                                            <div className=" text-white ms-3 ps-3 pb-2">
+                                                <h5 style={{ opacity: '80%' }}>
+                                                    {work.Team}
+                                                </h5>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </li>
