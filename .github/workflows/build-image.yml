@@ -93,7 +93,13 @@ jobs:
                   password: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Pull image to scan
-              run: docker pull ghcr.io/${{ github.actor }}/portfolio-image:"$GITHUB_RUN_ID"
+              run: docker pull ghcr.io/${{ github.actor }}/portfolio-image:${{ github.run_id }}
+
+            - name: Cache Trivy database
+              uses: actions/cache@v3
+              with:
+                  path: ~/.cache/trivy
+                  key: ${{ runner.os }}-trivy-db
 
             - name: Run Trivy for all CVEs (non-blocking)
               uses: aquasecurity/trivy-action@master
