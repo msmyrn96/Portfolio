@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/Portfolio/static/css/main.a2288e01.css",
-    "main.js": "/Portfolio/static/js/main.5dd9ecf1.js",
+    "main.js": "/Portfolio/static/js/main.9e6c3665.js",
     "static/js/453.5a04fe8b.chunk.js": "/Portfolio/static/js/453.5a04fe8b.chunk.js",
-    "static/media/profile.jpg": "/Portfolio/static/media/profile.1d5a6f7a6005799c8cca.jpg",
     "static/media/about_image.png": "/Portfolio/static/media/about_image.dab140ef01ff7209abfd.png",
+    "static/media/header_image.PNG": "/Portfolio/static/media/header_image.db41444f603d84db7481.PNG",
     "static/media/github 1.png": "/Portfolio/static/media/github 1.c02f3d659e7965d2e3e8.png",
     "index.html": "/Portfolio/index.html",
     "static/media/icons8-linkedin.svg": "/Portfolio/static/media/icons8-linkedin.e5a65f52fc05871b8d6942225656fbc3.svg",
@@ -16,11 +16,11 @@
     "static/media/icons8-instagram.svg": "/Portfolio/static/media/icons8-instagram.1df07686031bb6d7c310e73da0f3a024.svg",
     "static/media/burger-menu.svg": "/Portfolio/static/media/burger-menu.23338804fc643e78b2add6b255ba6bbf.svg",
     "main.a2288e01.css.map": "/Portfolio/static/css/main.a2288e01.css.map",
-    "main.5dd9ecf1.js.map": "/Portfolio/static/js/main.5dd9ecf1.js.map",
+    "main.9e6c3665.js.map": "/Portfolio/static/js/main.9e6c3665.js.map",
     "453.5a04fe8b.chunk.js.map": "/Portfolio/static/js/453.5a04fe8b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a2288e01.css",
-    "static/js/main.5dd9ecf1.js"
+    "static/js/main.9e6c3665.js"
   ]
 }
