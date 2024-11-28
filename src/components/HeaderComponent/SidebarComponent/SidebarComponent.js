@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.scss';
 import { ReactComponent as CloseIcon } from '../../../assets/icon-close.svg';
 import { ReactComponent as BurgerMenuIcon } from '../../../assets/burger-menu.svg';
-import profileImage from '../../../assets/profile.jpg';
+import profileImage from '../../../assets/header_image.PNG';
 
 import { useResponsive } from 'ahooks';
 
