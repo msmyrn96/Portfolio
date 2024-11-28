@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import profileImage from '../../assets/profile.jpg';
+import profileImage from '../../assets/header_image.PNG';
 import { useEffect, useState } from 'react';
 import SidebarComponent from './SidebarComponent/SidebarComponent';
 import { useResponsive } from 'ahooks';
@@ -26,7 +26,7 @@ const HeaderComponent = (props) => {
     return (
         <Container
             style={{
-                height: '6.25rem',
+                height: '7rem',
                 zIndex: '9999'
             }}
             className="d-flex p-0 m-0 justify-content-between w-100 main-header-container"
@@ -36,8 +36,8 @@ const HeaderComponent = (props) => {
                 <img
                     alt="cover"
                     style={{
-                        width: '4rem',
-                        height: '4rem',
+                        width: '5rem',
+                        height: '5rem',
                         objectFit: 'cover',
                         borderRadius: '50%',
                         position: 'relative'
