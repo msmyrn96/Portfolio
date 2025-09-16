@@ -7,6 +7,9 @@ on:
         types:
             - completed
 
+permissions:
+    contents: write # 👈 allow the bot to push to the repo
+
 jobs:
     deploy-react-to-gh-pages:
         if: github.event_name != 'pull_request'
