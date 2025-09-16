@@ -10,7 +10,6 @@ const AboutComponent = () => {
     const { xl, md } = useResponsive();
     const smallerScreensLayout = !xl;
     const smallScreensEnabled = !md;
-
     const infoList = convertTextToList(text);
 
     return (
